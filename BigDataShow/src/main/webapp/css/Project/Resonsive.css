@@ -1,0 +1,3050 @@
+@charset "utf-8";
+* {
+	touch-action: none;
+}
+
+/*全屏样式*/
+/*修改全屏之后的背景样式*/
+:not(:root):-webkit-full-screen::backdrop {
+    background: rgb(255,255,255)!important;
+}
+:not(:root):-moz-full-screen::backdrop {
+    background: rgb(255,255,255)!important;
+}
+
+/*当进入全屏之后针对某个元素进行样式设定*/
+/*Chrome*/
+:-webkit-full-screen .Options-Header {
+	font-size: 14px;
+}
+:-webkit-full-screen .Left_item {
+	width: 250px!important;
+}
+:-webkit-full-screen .prev {
+	left: 250px;
+}
+:-webkit-full-screen .myLeft {
+	left: 90px;
+}    
+:-webkit-full-screen .icon {
+	background-position: 65px 329px;
+	-ms-background-position-x: 65px;
+	-ms-background-position-y: 329px;
+}    
+:-webkit-full-screen .Tool {
+	transform: translate(-95px,25px);
+	-webkit-transform: translate(-95px,15px);
+}    
+:-webkit-full-screen #main {
+	width: 980px;
+    height: 550px;
+    margin-top:120px;
+}
+:-webkit-full-screen .mainTwo-JobToggle {
+	transform: translate(20px,0px);
+	-webkit-transform: translate(20px,0px);
+}
+:-webkit-full-screen #mainTwo-school {
+	transform: translate(115px,40px);
+	-ms-transform: translate(115px,40px);
+}
+:-webkit-full-screen .mainTwo-TopJob {
+	font-size:14px;
+}
+:-webkit-full-screen .Tool-Two {
+	margin-left: 130px;
+}
+:-webkit-full-screen .Tool-Two-content > li {
+	font-size: 14px;
+}
+:-webkit-full-screen #mainThird-Salary {
+	margin-top:160px;
+	margin-left: 100px;
+}
+:-webkit-full-screen #mainThird-rank_Salary {
+	margin-top:160px;
+	margin-left: 0px;
+}
+:-webkit-full-screen .JobThird-show {
+	width: 90px;
+}
+:-webkit-full-screen .JobThird-show-text {
+	font-size: 13px;
+}
+:-webkit-full-screen #mainFourth {
+    width: 93.3%;
+    height: 875px;
+    margin-top: 50px;
+    margin-left: 10.7rem;
+    box-shadow: 0px 0px 2px rgb(238,238,238);
+}
+
+/*Firefox*/
+:-moz-full-screen .Options-Header {
+	font-size: 14px;
+}
+:-moz-full-screen .Left_item {
+	width: 250px!important;
+}
+:-moz-full-screen .prev {
+	left: 250px;
+}
+:-moz-full-screen .myLeft {
+	left: 90px;
+}    
+:-moz-full-screen .icon {
+	background-position: 65px 329px;
+	-ms-background-position-x: 65px;
+	-ms-background-position-y: 329px;
+}    
+:-moz-full-screen #main {
+	width: 990px;
+    height: 565px;
+    margin-top:120px;
+}
+:-moz-full-screen .Tool {
+	transform: translate(-95px,25px);
+	-moz-transform: translate(-95px,5px);
+}  
+:-moz-full-screen #mainTwo-school {
+	height: 520px;
+	transform: translate(115px,40px);
+	-moz-transform: translate(115px,40px);
+}
+:-moz-full-screen .Tool-Two {
+    width: 110px;
+    height: 105px;
+    margin-left: 130px;
+    -moz-transform: translateY(-80px);
+}
+:-moz-full-screen .Tool-Two-content > li {
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+}
+:-moz-full-screen .mainTwo-TopJob {
+	font-size:14px;
+}
+:-moz-full-screen .Tool-Two {
+	margin-left: 130px;
+}
+:-moz-full-screen .Tool-Two-content > li {
+	font-size: 14px;
+}
+:-moz-full-screen #mainThird-Salary {
+	margin-top:160px;
+	margin-left: 100px;
+}
+:-moz-full-screen #mainThird-rank_Salary {
+	margin-top: 160px;
+	margin-left: 0px;
+}
+:-moz-full-screen .JobThird-show {
+	width: 90px;
+}
+:-moz-full-screen .JobThird-show-text {
+	font-size: 13px;
+}
+:-moz-full-screen #mainFourth {
+    width: 93.3%;
+    height: 775px;
+    margin-top: 50px;
+    margin-left: 10.7rem;
+    box-shadow: 0px 0px 2px rgb(238,238,238);
+}
+
+/*手机端：iPhone5 SE端 小于等于320px*/
+@media only screen and (max-width:320px) {
+	/*整体布局*/
+	.slide {
+		width: 7%!important;
+		overflow:hidden!important;
+	}
+	/*顶部通栏*/
+	.Top-nav {
+		width: 35%!important;
+		height: 4.5%!important;
+	}
+	.Top-nav > .home {
+		font-size: 17px!important;
+    	line-height: 2.5rem!important;
+	}
+	/*中英文切换按钮*/
+	.Eng_CN-border {
+		display: none;
+	}
+	.Eng_CN_toggle_responsive {
+		display: block;
+		height: 100%;
+		font-size: 9px!important;
+    	line-height: 2.6rem;
+    	right: 1rem;
+	}
+	/*左右平滑块*/
+	.controlArrow.prev {
+		width: 0%!important;
+	}
+	.controlArrow.next {
+		width: 0%!important;
+	}
+	hr {
+	    width: 90%!important;
+	    height:1rem!important;
+	    margin: 0.5rem!important;
+	    transform: translateX(1rem)!important;
+	}
+	/*底部通栏*/
+   .Bottom_item_responsive  {
+   	    width: 34.65%!important;
+	    height: 3.8rem!important;
+	    padding: 0 1rem!important;
+	    bottom: 0rem!important;
+   }
+   .Bottom_item_list {
+   		padding-left: 0.35rem!important;
+   }
+   .Bottom_item_list > li {
+	    height: 3.7rem!important;
+    	line-height: 3.7rem!important;
+    	margin: 0 0.9rem!important;
+    }
+   .Bottom_item_list > li > a {
+	    font-size: 10px!important;
+   }
+   .Bottom_item_back {
+	    width: 2rem!important;
+	    height: 0.2rem!important;
+	    left: 23%!important;
+   }
+    
+	/*第一张图表*/
+	#First_chart {
+		margin-top:0px!important;
+	}
+	#main {
+		width: 100%!important;
+	    height: 22rem!important;
+	    margin-top: 4rem!important;
+	}
+	.Tool {
+		width: 118%!important;
+	    height: 4rem!important;
+	    -webkit-transform: translate(-23.5rem,18rem)!important;
+	}
+	.Tool_ul {
+		width: 107.5%!important;
+		min-height: 4rem!important;
+		padding-left: 0.7rem!important;
+    	margin-bottom: 0.7rem!important;
+	}
+	.Tool_ul > li {
+    	width: 22.3%!important;
+	}
+	.Tool_ul > li > a {
+    	padding: 0.2rem 0.5rem!important;
+    }
+	.JobToggle_panel_esponsive   {
+	    width: 100%!important;
+    	height: 50%!important;
+    	margin: 0.8rem 0px!important;
+	}
+	.JobToggle_panel_header {
+		height: 1.5rem!important;
+	}
+	.JobToggle_panel_interval {
+	    margin: 0.2rem auto!important;
+	}
+	.JobToggle_panel_title {
+		line-height: 1.5rem!important;
+   		font-size: 10px!important;
+	}
+	.JobToggle_panel_body {
+	    height: auto!important;
+	    margin-top:0.3rem!important;
+	}
+	.JobToggle_panel_body_Part {
+		display: inline-block;
+	    width: 5rem!important;
+	    height: 2rem!important;
+	    font-size: 9px!important;
+	    padding: 0.5rem!important;
+	}
+	.JobToggle_panel_body_content {
+	    margin-top: 0.9rem!important;
+	}
+	.JobToggle_panel_body_content > li {
+	    margin-top: 0.3rem!important;
+	}
+	.JobToggle_panel_body_content > li > a {
+	    font-size: 7px!important;
+	    padding: 4.5%!important;
+    	border-radius: 0.3rem!important;
+    	-moz-border-radius: 0.3rem!important;
+    	-webkit-border-radius: 0.3rem!important;
+	}
+	
+    /*第二张图表*/
+   .mainTwo-TopJob {
+   		width: 6rem!important;
+	    height: 2.1rem!important;
+	    font-size: 9px!important;
+	    margin: 0!important;
+	    margin-top: 2rem!important;
+	    padding-top: 0.5rem!important;
+	    transform: translateX(11.5rem)!important;
+	    -moz-transform: translateX(11.5rem)!important;
+	    -ms-transform: translateX(11.5rem)!important;
+	    -webkit-transform: translateX(11.5rem)!important;
+	    font-weight: 400!important;
+	    border-radius: 0px 0px 1rem 1rem!important;
+	    -moz-border-radius: 0px 1rem 1rem 1rem!important;
+	    -webkit-border-radius: 0px 0px 1rem 1rem!important;
+   }
+   #mainTwo-school {
+   		display: block!important;
+   		width: 28rem!important;
+    	height: 15rem!important;
+    	transform: translate(0.5rem,1.5rem)!important;
+    	-moz-transform: translate(0.5rem,1.5rem)!important;
+    	-webkit-transform: translate(0.5rem,1.5rem)!important;
+    	-ms-transform: translate(0.5rem,1.5rem)!important;
+   }
+   #mainTwo-salary {
+   		display: block!important;
+   	    width: 28rem!important;
+    	height: 21.5rem!important;
+    	transform: translate(0.5rem,5rem)!important;
+    	-moz-transform: translate(0.5rem,5rem)!important;
+    	-ms-transform: translate(0.5rem,5rem)!important;
+    	-webkit-transform: translate(0.5rem,5rem)!important;
+   }
+   .Tool-Two {
+   		width: 28.5rem!important;
+	    height: 1.5rem!important;
+	    margin-left: 0px!important;
+	    transform: translate(0.5rem,-19rem)!important;
+	    -moz-transform: translate(0.5rem,-19rem)!important;
+	    -ms-transform: translate(0.5rem,-19rem)!important;
+	    -webkit-transform: translate(-3rem,-19rem)!important;
+	    font-size: 9px!important;
+   }
+   .Tool-Two-content > li {
+   	    width: 20%!important;
+	    height: 1.5rem!important;
+	    margin-top: 0px!important; 
+	    line-height: 1.5rem!important;
+	}
+ 	.Tool-Two-content > li:nth-of-type(1) {
+ 		left: 4.5rem!important;
+	}
+	.Tool-Two-content > li:nth-of-type(2) {
+		top: 0px!important;
+		left: 11.5rem!important;
+	}
+	.Tool-Two-content > li:nth-of-type(3) {
+		top: 0px!important;
+		left: 17rem!important;
+	}
+	.Tool-Two-content_radio {
+		width: 1.8rem!important;
+		height: 0.6rem!important;
+	}
+	.Tool-Two-content_radios {
+		font-size: 9px!important;
+	    top: -0.3rem!important;
+	}
+    .mainTwo-JobToggle {
+	    width: 100%!important;
+    	height: 13rem!important;
+    	transform: translate(0rem,-2rem)!important;
+    	transform: translate(0rem,-2rem)!important;
+    	transform: translate(0rem,-2rem)!important;
+    	transform: translate(0rem,-2rem)!important;
+    }
+    .mainTwo-JobToggle-first,
+	.mainTwo-JobToggle-second,
+	.mainTwo-JobToggle-third {
+	    width: 30%!important;
+    	height: 11.7rem!important;
+		background-color: rgb(247,247,247)!important;
+		border: none!important;
+		box-shadow: 0.1rem 0px 0.1rem rgb(230,230,230)!important;
+		border-radius: 0px!important;
+		-moz-border-radius: 0px!important;
+		-webkit-border-radius: 0px!important;
+	}
+	.mainTwo-JobToggle-third {
+		width: 37%!important;
+	}
+	.mainTwo-JobToggle-head  {
+	    height: 2.3rem!important;
+    	line-height: 2.3rem!important;
+	    font-size: 9px!important;
+    	font-weight: 400!important;
+    	color: rgba(51,70,95,0.8)!important;
+    	border-bottom: 0.5px solid #C8C8C8!important;
+	}
+	.mainTwo-JobToggle-content {
+		width: 95%!important;
+	    margin: 0px!important; 
+	    padding-left: 0.5rem!important;
+	}
+	.mainTwo-JobToggle-content > li {
+	    margin: 0px 0.5rem!important;
+	}
+	.mainTwo-JobToggle-content > li > a {
+		color: rgb(105,120,125)!important;
+	    font-size: 9px!important;
+	}
+     
+    /*第三张图表*/
+    #mainThird-Salary {
+	    width: 100%!important;
+	    height: 24rem!important;
+	    margin-top: 3rem!important;
+	    margin-left: 0rem!important;
+	}
+	#mainThird-rank_Salary {
+	    width: 100%!important;
+	    height: 18rem!important;
+	    margin-left: 0px!important;
+	    transform: translateY(0rem)!important;
+	    -moz-transform: translateY(0rem)!important;
+	    -ms-transform: translateY(0rem)!important;
+	    -webkit-transform: translateY(0rem)!important;
+	}
+	.JobThird {
+	    width: 45%!important;
+	    height: 2rem!important;
+	    margin-top: 0px!important;
+	    margin-left: 0px!important;
+	}
+	.JobThird-show {
+	    width: 6rem!important;
+	    height: 2rem!important;
+	    padding: 0px!important;
+	    line-height: 3.6rem!important;
+	}
+	.JobThird-show-text {
+	    font-size: 7px!important;
+	    font-weight: 100!important;
+	}
+	.JobThird-linear {
+	    width: 3.5rem!important;
+	    height: 2rem!important;
+	    margin-left: 0.5rem!important;
+	}
+	.JobThird-linear-icon {
+	    line-height: 1.4rem!important;
+	    font-size: 10px!important;
+	}
+	.JobThird-Job {
+	    width: 3rem!important;
+	    height: 1.7rem!important;
+	    line-height: 0rem!important;
+	    font-size: 11px!important;
+	    margin-left: -1.5rem!important;
+	}
+	.JobThird-average {
+	    display: inline-block!important;
+	    width: 50%!important;
+	    height: 2rem!important;
+	    margin-left: 14rem!important;
+	    transform: translateY(-2.5rem)!important;
+	    -moz-transform: translateY(-2.5rem)!important;
+	    -webkit-transform: translateY(-2.5rem)!important;
+	    -ms-transform: translateY(-2.5rem)!important;
+	}
+	.JobThird-average > span {
+	    width: 31%!important;
+	    font-size: 9px!important;
+	    line-height: 20px!important;
+	}
+	.JobThird-average-iconback {
+		border-top: 1px solid rgb(228,60,89)!important;
+	}
+	.JobThird-toggle {
+		width: 100%!important;
+	    height: 3rem!important;
+	    margin: 0px auto!important;
+	    border-top: 1px solid #CCCCCC!important;
+	    border-top-right-radius: 0px!important;
+	    border-top-left-radius: 0px!important;
+	    box-shadow: 0px 8px 8px -12px rgba(0,0,0,.7)!important;
+	    transform: translateY(-1rem)!important;
+	    -moz-transform: translateY(-1rem)!important;
+	    -webkit-transform: translateY(-1rem)!important;
+	    -ms-transform: translateY(-1rem)!important;
+	}
+	.row-small {
+	    width: 100%!important;
+	    margin: 0 auto!important;
+	    margin-right: 0px!important;
+	    margin-left: 0px!important;
+	}
+	.JobThird-toggle-Classify {
+	    height: 3rem!important;
+	    background-color: rgb(247,247,247)!important;
+	}
+	.JobThird-toggle-Classify > i {
+		display: none!important;
+	}
+	.JobThird-toggle-Classify-head {
+	    line-height: 3rem!important;
+	    font-size: 11px!important;
+	} 
+	.JobThird-toggle-Classify-content {
+	    width: 100%!important;
+	    margin-left: 0px!important;
+	    background-color: rgb(247,247,247);
+	    border: 0px solid #CCCCCC!important;
+	    border-top: 0.3rem solid rgb(41,60,89)!important;
+	    bottom: 70%!important;
+	}
+	.JobThird-toggle-Classify-content > li {
+	    height: 2.5rem!important;
+	    border-bottom: 0.03rem solid #CCCCCC!important;
+	}
+	.JobThird-toggle-Classify-content > li > a {
+	    font-size: 9px!important;
+	    line-height: 25px!important;
+	}
+	
+	/*第四张图表*/
+		/*职位搜索栏*/
+	#FourthJob_Control {
+	    width: 35%!important;
+	    height: 100%!important;
+	    left: 0%!important;
+	    top: 0!important;
+	}
+	.FourthJob, .FourthJob-search {
+	    width: 100%!important;
+	    height: 100%!important;
+	    margin-left: 0.4rem!important;
+	}
+	.FourthJob-search > div {
+	    width: 80%!important;
+	    height: 100%!important;
+	    margin-left: 0px!important;
+	    line-height: 4.5rem!important;
+	}
+	.FourthJob-put {
+	    height: 60%!important;
+	    border-bottom: 0.5px solid #F7F7F7!important;
+	    font-size: 10px!important;
+	    transform: translateY(-12px)!important;
+	}
+	.FourthJob-put::-webkit-input-placeholder{ /*Webkit*/
+	    color: #F7F7F7!important;
+		font-weight: 600!important;
+		font-size: 9px!important;
+	}
+	.FourthJob-put::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	    color: #F7F7F7!important;
+		font-weight: 600!important;
+		font-size: 9px!important;
+	}
+	.FourthJob-put:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+	    color: #F7F7F7!important;
+		font-weight: 600!important;
+		font-size: 9px!important;
+	}
+	.fa-FourthJob-icon {
+	    display: inline-block!important;
+	    width: 15%!important;
+	    height: 100%!important;
+	    padding-left: 0.4rem!important;
+	    transform: translateY(-1.1rem)!important;
+	}
+	.FourthJob-icon {
+	    font-size: 13px!important;
+	    line-height: 2.8rem!important;
+	}
+	.ui-menu {
+		box-shadow: 0px 0px 0.2rem rgba(204,204,204,.5)!important;
+	}
+	.ui-widget.ui-widget-content {
+		border: none!important;
+	}
+	.ui-menu > li > div {
+		height: 2rem!important;
+		line-height: 2rem!important;
+		font-size: 11px!important;
+	}
+	.ui-menu > li > div:hover {
+		font-size: 11px!important;
+	}
+	/*地图*/
+	#mainFourth {
+	    width: 110%!important;
+	    height: 50.5rem!important;
+	    margin-top: 2.5rem!important;
+	    margin-left: -1.5rem!important;
+	    overflow: hidden!important;
+	}
+	.controlArrow.prev {
+		left: 0px!important;
+	}
+	.controlArrow.next {
+		right: 60rem!important;
+	}
+	.controlArrow.prev,.controlArrow.next {
+		width: 2.5%!important;
+	    height: 15%!important;
+	    bottom: 23rem!important;
+	}
+	.mylist {
+		display: block!important;	
+		height: 0px!important;
+		width: 35%!important;
+	    left: 0!important;
+	    top: 50%!important;
+	}
+	.myLeft,.myright {
+		animation: none!important;
+	    -webkit-animation: none!important;
+	    -moz-animation: none!important;
+	    -ms-animation: none!important;
+	    padding: 0px!important;
+    	font-size: 13px!important;
+	}
+	.myLeft {
+	    left: 1rem!important;
+	}
+	.myright {
+	    right: 1rem!important;
+	}
+	
+	/*百度地图里程控件*/
+	.BMap_scaleCtrl {
+		width: 6rem!important;
+		height: 2.1rem!important;
+		top: 0.5rem!important;
+	    left: 0.5rem!important;
+	}
+	.BMap_scaleCtrl div.BMap_scaleTxt {
+		font-size: 9px;
+		line-height: 2.1rem;
+	}
+	.BMap_scaleHBar {
+		height: 0.3rem;
+	}
+	
+	/*第五张图表*/
+	#mainfifth {
+	    width: 100%!important;
+	    height: 40rem!important;
+    	margin-top: 6rem!important;
+	    margin-left: 0px!important;
+	}
+}
+
+/*手机端：iPhone6/7/8端 设备宽度在 360px以上 380px以下*/
+@media only screen and (min-width: 360px) and  (max-width:380px){
+	/*外部框架*/
+	.slide{
+		width: 8.15%!important;
+		overflow:hidden!important;
+	}
+	/*顶部通栏*/
+	.Top-nav {
+		width: 41.1%!important;
+		height: 4.5%!important;
+	}
+	.Top-nav > .home {
+		font-size: 19px!important;
+    	line-height: 158%!important;
+	}
+	/*中英文切换按钮*/
+	.Eng_CN-border {
+		display: none;
+	}
+	.Eng_CN_toggle_responsive {
+		display: block;
+		height: 100%;
+		font-size: 10px!important;
+    	line-height: 280%!important;
+    	right: 5%;
+	}
+	/*左右平滑块*/
+	.controlArrow.prev,.controlArrow.next {
+		width: 2.5%!important;
+	    height: 15%!important;
+	    bottom: 42%!important;
+	}
+	.controlArrow.prev {
+		left: 0px!important;
+	}
+	.controlArrow.next {
+	    right: 60%!important;
+	}
+	.mylist {
+		display: block!important;	
+		height: 0px!important;
+		width: 40%!important;
+	    left: 0!important;
+	    top: 51%!important;
+	}
+	.myLeft,.myright {
+		top: -1rem!important;
+		font-size: 15px!important;
+		animation: none!important;
+	    -webkit-animation: none!important;
+	    -moz-animation: none!important;
+	    -ms-animation: none!important;
+	    padding: 0px!important;
+	}
+	.myLeft {
+	    left: 2%!important;
+	}
+	.myright {
+		right: 1%!important;
+	}
+	
+	hr {
+		width: 90%!important;
+		height:1rem!important;
+	    margin: 0rem!important;
+	    transform: translateX(1.5rem)!important;
+	}
+	/*底部通栏*/
+   .Bottom_item_responsive  {
+   	    width: 41.1%!important;
+	    height: 3.8rem!important;
+	    padding: 0 1rem!important;
+	    bottom: 0rem!important;
+	    z-index: 10!important;
+   }
+   .Bottom_item_list {
+   		padding-left: 1.5%!important;
+   }
+   .Bottom_item_list > li {
+	    height: 3.7rem!important;
+    	line-height: 3.7rem!important;
+    	margin: 0 0.9rem!important;
+    }
+    .Bottom_item_list > li > a {
+    	font-size: 12px!important;
+	}
+    .Bottom_item_back {
+	    width: 2rem!important;
+	    height: 0.2rem!important;
+	    left: 23%!important;
+    }
+    
+	/*第一张图表*/
+	#main {
+		width: 100%!important;
+		height:26rem!important;
+	}
+	.Tool {
+		width: 115%!important;
+	    height: 4rem!important;
+	    -webkit-transform: translate(-23.5rem,20.6rem)!important;
+	}
+	.Tool_ul {
+		width: 107.5%!important;
+		min-height: 4rem!important;
+		padding-left: 0.7rem!important;
+    	margin-bottom: 0.7rem!important;
+	}
+	.Tool_ul > li {
+    	width: 22.3%!important;
+	}
+	.Tool_ul > li:nth-of-type(2) {
+	    margin-left: 0px!important; 
+	}
+	.Tool_ul > li > a {
+    	padding: 0.2rem 0.5rem!important;
+    }
+	.JobToggle_panel_esponsive   {
+	    width: 100%!important;
+    	height: 50%!important;
+    	margin: 0.8rem 0px!important;
+	}
+	.JobToggle_panel_header {
+		height: 1.5rem!important;
+	}
+	.JobToggle_panel_interval {
+	    margin: 0.2rem auto!important;
+	}
+	.JobToggle_panel_title {
+		line-height: 1.5rem!important;
+   		font-size: 10px!important;
+	}
+	.JobToggle_panel_body {
+	    height: auto!important;
+	    margin-top:0.3rem!important;
+	}
+	.JobToggle_panel_body_Part {
+		display: inline-block;
+	    width: 5rem!important;
+	    height: 2rem!important;
+	    font-size: 9px!important;
+	    padding: 0.5rem!important;
+	}
+	.JobToggle_panel_body_content {
+	    margin-top: 0.9rem!important;
+	}
+	.JobToggle_panel_body_content > li {
+	    margin-top: 0.3rem!important;
+	}
+	.JobToggle_panel_body_content > li > a {
+	    font-size: 0.7rem!important;
+	    padding: 4.5%!important;
+    	border-radius: 0.3rem!important;
+    	-moz-border-radius: 0.3rem!important;
+    	-webkit-border-radius: 0.3rem!important;
+	}
+    
+    
+	/*第二张图表*/
+   .mainTwo-TopJob {
+   		width: 6rem!important;
+	    height: 2rem!important;
+	    font-size: 9px!important;
+	    margin: 0!important;
+	    margin-top: 3rem!important;
+	    transform: translateX(14.5rem)!important;
+	    -moz-transform: translateX(14.5rem)!important;
+	    -webkit-transform: translateX(14.5rem)!important;
+	    -ms-transform: translateX(14.5rem)!important;
+	    font-weight: 400!important;
+	    border-radius: 0px 0px 1rem 1rem!important;
+	    -moz-border-radius: 0px 0px 1rem 1rem!important;
+	    -webkit-border-radius: 0px 0px 1rem 1rem!important;
+	    padding-top: 0.2rem!important;
+   }
+   #mainTwo-school {
+   		display: block!important;
+	    width: 87%!important;
+	    height: 20rem!important;
+	    transform: translate(2.5rem,0.5rem)!important;
+	    -moz-transform: translate(2.5rem,0.5rem)!important;
+	    -webkit-transform: translate(2.5rem,0.5rem)!important;
+	    -ms-transform: translate(2.5rem,0.5rem)!important;
+   }
+   #mainTwo-salary {
+   		display: block!important;
+   	    width: 86%!important;
+    	height: 17rem!important;
+    	transform: translate(2.8rem,3.5rem)!important;
+    	-moz-transform: translate(2.8rem,3.5rem)!important;
+    	-ms-transform: translate(2.8rem,3.5rem)!important;
+    	-webkit-transform: translate(2.8rem,3.5rem)!important;
+   }
+   .Tool-Two {
+   		width: 94%!important;
+   		height: 1.5rem!important;
+	    margin-left: 0px!important;
+	    transform: translate(0.5rem,-16rem)!important;
+	    -ms-transform: translate(0.5rem,-16rem)!important;
+	    -moz-transform: translate(0.5rem,-16rem)!important;
+	    -webkit-transform: translate(0.5rem,-16rem)!important;
+    	font-size: 9px!important;
+   }
+   .Tool-Two-content > li {
+   	    width: 20%!important;
+	    height: 1.5rem!important;
+	    margin-top: 0px!important; 
+	    line-height: 1.5rem!important;
+	}
+ 	.Tool-Two-content > li:nth-of-type(1) {
+ 		left: 4.5rem!important;
+	}
+	.Tool-Two-content > li:nth-of-type(2) {
+		top: 0px!important;
+		left: 11.5rem!important;
+	}
+	.Tool-Two-content > li:nth-of-type(3) {
+		top: 0px!important;
+		left: 17rem!important;
+	}
+	.Tool-Two-content_radio {
+		width: 1.8rem!important;
+		height: 0.6rem!important;
+	}
+	.Tool-Two-content_radios {
+		font-size: 9px!important;
+	    top: -3px!important;
+	}
+    .mainTwo-JobToggle {
+	    width: 100%!important;
+	    height: 12rem!important;
+	    transform: translate(0px,2.5rem)!important;
+	    -moz-transform: translate(0px,2.5rem)!important;
+	    -webkit-transform: translate(0px,2.5rem)!important;
+	    -ms-transform: translate(0px,2.5rem)!important;
+	}
+    .mainTwo-JobToggle-first,
+	.mainTwo-JobToggle-second,
+	.mainTwo-JobToggle-third {
+	    width: 30%!important;
+		height: 11.5rem!important;
+		background-color: rgb(247,247,247)!important;
+		border: none!important;
+		box-shadow: 0.1rem 0px 0.1rem rgb(230,230,230)!important;
+		border-radius: 0px!important;
+		-moz-border-radius: 0px!important;
+		-webkit-border-radius: 0px!important;
+	}
+	.mainTwo-JobToggle-third {
+		width: 37%!important;
+	}
+	.mainTwo-JobToggle-head  {
+	    height: 2.3rem!important;
+	    line-height: 2.3rem!important;
+	    font-size: 9px!important;
+	    font-weight: 400!important;
+	    color: rgba(51,70,95,0.8)!important;
+	    border-bottom: 0.05rem solid #C8C8C8!important;
+	}
+	.mainTwo-JobToggle-content {
+		width: 95%!important;
+	    margin: 0px!important; 
+	    padding-left: 0.5rem!important;
+	}
+	.mainTwo-JobToggle-content > li {
+	    margin: 0.1rem 0.5rem!important;
+	}
+	.mainTwo-JobToggle-content > li > a {
+		color: rgb(105,120,125)!important;
+	    font-size: 9px!important;
+	}
+	
+	/*第三张图表*/
+    #mainThird-Salary {
+	    width: 98%!important;
+	    height: 27rem!important;
+	    margin-top: 4rem!important;
+	    margin-left: 0rem!important;
+	}
+	#mainThird-rank_Salary {
+	    width: 98%!important;
+	    height: 21rem!important;
+	    margin-left: 0px!important;
+	    transform: translateY(0rem)!important;
+	    -moz-transform: translateY(0rem)!important;
+	    -ms-transform: translateY(0rem)!important;
+	    -webkit-transform: translateY(0rem)!important;
+	}
+	.JobThird {
+	    width: 37%!important;
+	    height: 2rem!important;
+	    margin-top: 0px!important;
+	    margin-left: 2rem!important;
+	}
+	.JobThird-show {
+	    width: 6rem!important;
+	    height: 2rem!important;
+	    padding: 0px!important;
+	    line-height: 3.6rem!important;
+	}
+	.JobThird-show-text {
+	    font-size: 7px!important;
+	    font-weight: 100!important;
+	}
+	.JobThird-linear {
+	    width: 3.5rem!important;
+	    height: 2rem!important;
+	    margin-left: 0.5rem!important;
+	}
+	.JobThird-linear-icon {
+	    line-height: 1.4rem!important;
+	    font-size: 10px!important;
+	}
+	.JobThird-Job {
+	    width: 3rem!important;
+	    height: 1.7rem!important;
+	    line-height: 0rem!important;
+	    font-size: 11px!important;
+	    margin-left: -1.5rem!important;
+	}
+	.JobThird-average {
+	    display: inline-block!important;
+	    width: 50%!important;
+	    height: 2rem!important;
+	    margin-left: 16rem!important;
+	    transform: translateY(-2.5rem)!important;
+	    -moz-transform: translateY(-2.5rem)!important;
+	    -webkit-transform: translateY(-2.5rem)!important;
+	    -ms-transform: translateY(-2.5rem)!important;
+	}
+	.JobThird-average > span {
+	    width: 31%!important;
+	    font-size: 9px!important;
+	    line-height: 20px!important;
+	}
+	.JobThird-average-iconback {
+		border-top: 1px solid rgb(228,60,89)!important;
+	}
+	.JobThird-toggle {
+		width: 100%!important;
+	    height: 3rem!important;
+	    margin: 0.7rem auto!important;
+	    border-top: 1px solid #CCCCCC!important;
+	    border-top-right-radius: 0px!important;
+	    border-top-left-radius: 0px!important;
+	    box-shadow: 0px 8px 8px -12px rgba(0,0,0,.7)!important;
+	    transform: translateY(-1rem)!important;
+	    -moz-transform: translateY(-1rem)!important;
+	    -webkit-transform: translateY(-1rem)!important;
+	    -ms-transform: translateY(-1rem)!important;
+	}
+	.row-small {
+	    width: 100%!important;
+	    margin: 0 auto!important;
+	    margin-right: 0px!important;
+	    margin-left: 0px!important;
+	}
+	.JobThird-toggle-Classify {
+	    height: 3rem!important;
+	    background-color: rgb(247,247,247)!important;
+	}
+	.JobThird-toggle-Classify > i {
+		display: none!important;
+	}
+	.JobThird-toggle-Classify-head {
+	    line-height: 3rem!important;
+	    font-size: 11px!important;
+	} 
+	.JobThird-toggle-Classify-content {
+	    width: 100%!important;
+	    margin-left: 0px!important;
+	    background-color: rgb(247,247,247);
+	    border: 0px solid #CCCCCC!important;
+	    border-top: 0.3rem solid rgb(41,60,89)!important;
+	    bottom: 70%!important;
+	}
+	.JobThird-toggle-Classify-content > li {
+	    height: 2.5rem!important;
+	    border-bottom: 0.03rem solid #CCCCCC!important;
+	}
+	.JobThird-toggle-Classify-content > li > a {
+	    font-size: 9px!important;
+	    line-height: 25px!important;
+	}
+	
+	/*第四张图表*/
+		/*职位搜索栏*/
+	#FourthJob_Control {
+	    width: 35%!important;
+	    height: 100%!important;
+	    left: 0%!important;
+	    top: 0!important;
+	}
+	.FourthJob, .FourthJob-search {
+	    width: 100%!important;
+	    height: 100%!important;
+	    margin-left: 0.4rem!important;
+	}
+	.FourthJob-search > div {
+	    width: 80%!important;
+	    height: 100%!important;
+	    margin-left: 0px!important;
+	    line-height: 4.5rem!important;
+	}
+	.FourthJob-put {
+	    height: 60%!important;
+	    border-bottom: 0.5px solid #F7F7F7!important;
+	    font-size: 10px!important;
+	    transform: translateY(-12px)!important;
+	}
+	.FourthJob-put::-webkit-input-placeholder{ /*Webkit*/
+	    color: #F7F7F7!important;
+		font-weight: 600!important;
+		font-size: 9px!important;
+	}
+	.FourthJob-put::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	    color: #F7F7F7!important;
+		font-weight: 600!important;
+		font-size: 9px!important;
+	}
+	.FourthJob-put:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+	    color: #F7F7F7!important;
+		font-weight: 600!important;
+		font-size: 9px!important;
+	}
+	.fa-FourthJob-icon {
+	    display: inline-block!important;
+	    width: 15%!important;
+	    height: 100%!important;
+	    padding-left: 0.4rem!important;
+	    transform: translateY(-1.1rem)!important;
+	}
+	.FourthJob-icon {
+	    font-size: 13px!important;
+	    line-height: 2.8rem!important;
+	}
+	.ui-menu {
+		box-shadow: 0px 0px 0.2rem rgba(204,204,204,.5)!important;
+	}
+	.ui-widget.ui-widget-content {
+		border: none!important;
+	}
+	.ui-menu > li > div {
+		height: 2rem!important;
+		line-height: 2rem!important;
+		font-size: 11px!important;
+	}
+	.ui-menu > li > div:hover {
+		font-size: 11px!important;
+	}
+	.container-small, .container-small-row, .container-small-row-col {
+		height: 100%!important;
+	}
+	/*地图*/
+	#mainFourth {
+	    width: 109%!important;
+	    height: 90%!important;
+	    margin-top: 3rem!important;
+	    margin-left: -1.5rem!important;
+	    overflow: hidden!important;
+	}
+	/*百度地图里程控件*/
+	.BMap_scaleCtrl {
+		width: 6rem!important;
+		height: 2.1rem!important;
+		top: 0.5rem!important;
+	    left: 0.5rem!important;
+	}
+	.BMap_scaleCtrl div.BMap_scaleTxt {
+		font-size: 9px;
+		line-height: 2.1rem;
+	}
+	.BMap_scaleHBar {
+		height: 0.3rem;
+	}
+	
+	/*第五张图表*/
+	#mainfifth {
+	    width: 95%!important;
+	    height: 42rem!important;
+    	margin-top: 8rem!important;
+	    margin-left: 1rem!important;
+	}
+}
+
+/*手机端: Pixel端 最大768px宽度*/
+@media only screen and (max-width:768px) {
+	body {
+		background-color: #F7F7F7;
+	}
+	/*顶部通栏*/
+	.Top-nav {
+		width: 40rem;
+    	height: 3rem;
+	}
+	.Top-nav > .home {
+		font-size: 17px;
+		line-height: 3rem;
+	}
+	/*中英文切换按钮*/
+	.Eng_CN-border {
+		display: none;
+	}
+	.Eng_CN_toggle_responsive {
+		font-size: 13px;
+		display: block;
+	}
+
+	/*左侧通栏*/
+	.Left_item {
+		display: none;
+	}
+	hr {
+	    width: 35rem;
+	    height: 0.5rem!important;
+	    border-top: 0.1rem solid #CCCCCC!important;
+	    border-top-left-radius: 0.1rem!important;
+	    transform: translateX(1.3rem)!important;
+	    margin-top: 0!important;
+	    margin-bottom: 0!important;
+    }
+    
+    /*左右平滑块*/
+	.controlArrow.prev,.controlArrow.next {
+		width: 2.5%!important;
+	    height: 15%!important;
+	    bottom: 47%!important;
+	}
+	.controlArrow.prev {
+		left: 0px;
+	}
+	.controlArrow.next {
+	    right: 57%;
+	}
+	.mylist {
+		display: block;	
+		height: 0px;
+		width: 45%;
+	    left: 0;
+	    top: 50%;
+	}
+	.myLeft,.myright {
+		top: -1rem;
+		font-size: 15px;
+		animation: none;
+	    -webkit-animation: none;
+	    -moz-animation: none;
+	    -ms-animation: none;
+	    padding: 0px;
+	}
+	.myLeft {
+	    left: 4%;
+	}
+	.myright {
+		right: 8%;
+	}
+	/*底部通栏*/
+	.Bottom_item_responsive {
+		width: 44.65%;
+		height: 4.5rem;
+	    position: absolute;
+	    bottom: 0%;
+	    padding: 0 1.5rem;
+		background-color: rgb(41,60,85);
+		z-index: 10!important;
+	}
+	.Bottom_item_list {
+		width: 100%;
+		height: 100%;
+		list-style: none;
+	}
+	.Bottom_item_list > li {
+		height: 4.5rem;
+	    float: left;
+	    line-height: 4.5rem;
+	    margin: 0 1.3rem;
+	    position: relative;
+	}
+	.Bottom_item_list > li > a {
+		font-size: 12px;
+		color: #F7F7F7;
+	}
+	.Bottom_item_back {
+		width: 3rem;
+    	height: 0.3rem;
+    	position: absolute;
+   	 	bottom: 0;
+    	left: 17%;
+    	border: 0.1rem solid rgba(220,60,55,1);
+    	border-radius: 0.7rem 0.7rem 0px 0px;
+    	-moz-border-radius: 0.7rem 0.7rem 0px 0px;
+    	-webkit-border-radius: 0.7rem 0.7rem 0px 0px;
+    	background-color: rgba(220,60,55,1);
+	}
+	.container-fluid {
+	    padding-left: 10px!important;
+	}
+	/*第一张图表*/
+	#main {
+		width: 41%;
+		height: 26rem;
+		box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		margin-top: 0px;
+		font-size: 10px;
+		margin-left: 5px;
+	}
+	.JobToggle_panel_esponsive {
+		width: 34%;
+	    height: 23rem;
+	    margin: 0.8rem 3rem;
+	}
+	.JobToggle_panel_header {
+		width: 100%;
+		height: 2rem;
+		text-align: center;
+	}
+	.JobToggle_panel_title {
+		color: rgb(74,60,85);
+		line-height: 2rem;
+    	font-size: 12px;
+		font-weight: 600;
+	}
+	.JobToggle_panel_interval {
+		display: block;
+		margin: 0.2rem auto;
+		color: #C0C0C0;
+	}
+	.JobToggle_panel_body {
+		width: 100%;
+		height: 20rem;
+   	 	margin-top: 0.5rem;
+	}
+	.JobToggle_panel_body_Part {
+		width: 5rem;
+		height: 2rem;
+		font-size: 12px;
+		padding: 0.5rem 1rem;
+		border-bottom: 0.1rem solid rgb(221,65,89);
+		color: rgb(21,60,85);
+	}
+	.JobToggle_panel_body_content {
+		list-style: none;
+		margin-top: 1.5rem;
+	}
+	.JobToggle_panel_body_content > li {
+		margin-top: 0.5rem;
+	}
+	.JobToggle_panel_body_content > li > a {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none!important;
+		font-size: 10px;
+		padding: 0.4rem;
+		border-radius: 0.5rem;
+		-moz-border-radius: 0.5rem;
+		-webkit-border-radius: 0.5rem;
+		border: 0.1rem solid #ccc;
+	}
+	/*工具栏*/
+	.Tool {
+		width: 45.8%;
+		transform: translate(-23.4rem,0px);
+		-moz-transform: translate(-23.4rem,0px);
+		-ms-transform: translate(-23.4rem,0px);
+		-webkit-transform: translate(-23.4rem,0px);
+	}
+	.Tool_ul {
+		width: 100%;
+	    margin-right: 0;
+	    padding-top: 0.5rem;
+	    border-top: 0.1rem solid #CCCCCC;
+	    border-bottom: 0.1rem solid #CCCCCC;
+	}
+	.Tool_ul > li {
+	    width: 23%;
+	    margin: 0;
+	    animation:none!important;
+	    -moz-animation:none!important;
+	    -webkit-animation:none!important;
+	    -ms-animation:none!important;
+	    transform: none!important;
+	    -moz-transform: none!important;
+	    -webkit-transform: none!important;
+	    -ms-transform: none!important;
+	    line-height: 2rem;
+	}
+	.Tool_ul > li > a {
+		padding: 0.6rem 1rem;
+	    font-size: 9px;
+	    border-bottom: 0.1rem solid rgba(220,59,54,.5);
+	    background: none;
+	}
+	.Tool_ul > li:nth-of-type(2){
+		margin-left: 1rem;
+	}
+	.Tool_ul > li:nth-of-type(3){
+		margin-left: 0px;
+	}
+	.Tool_ul > li:nth-of-type(4){
+		margin-left: 0px;
+	}
+	.Tool_ul > li > a > i {
+		display: none;
+	}
+	
+	/*第二张图表*/
+   .mainTwo-TopJob {
+   		width: 6rem;
+	    height: 2rem;
+	    font-size: 9px;
+	    margin: 0;
+	    margin-top: 2.9rem;
+	    padding-top: 0px;
+	    transform: translateX(16.4rem);
+	    -moz-transform: translateX(16.4rem);
+	    -ms-transform: translateX(16.4rem);
+	    -webkit-transform: translateX(16.4rem);
+	    font-weight: 400;
+	    border-radius: 0px 0px 1rem 1rem;
+	    -moz-border-radius: 0px 0px 1rem 1rem;
+	    -webkit-border-radius: 0px 0px 1rem 1rem;
+   }
+ 
+   #mainTwo-school {
+   		display: block;
+	    width: 38%;
+	    height: 21.5rem;
+	    transform: translate(3.9rem,1rem);
+	    -ms-transform: translate(3.9rem,1rem);
+	    -moz-transform: translate(3.9rem,1rem);
+	    -webkit-transform: translate(3.9rem,1rem);
+	}
+
+   #mainTwo-salary {
+	    display: block;
+	    width: 34%;
+	    height: 18rem;
+	    transform: translate(5rem,5.5rem);
+	    -ms-transform: translate(5rem,5.5rem);
+	    -webkit-transform: translate(5rem,5.5rem);
+	    -moz-transform: translate(5rem,5.5rem);
+	}
+   .Tool-Two {
+   		width: 94%;
+	    height: 1.5rem;
+	    margin-left: 0px;
+	    transform: translate(0.5rem,-16rem);
+	    -ms-transform: translate(0.5rem,-16rem);
+	    -moz-transform: translate(0.5rem,-16rem);
+	    -webkit-transform: translate(0.5rem,-16rem);
+	    font-size: 9px;
+   }
+   .Tool-Two-content > li {
+   	    width: 7%;
+	    height: 1.5rem;
+	    margin-top: 0px; 
+	    line-height: 1.5rem;
+	}
+ 	.Tool-Two-content > li:nth-of-type(1) {
+ 		left: 8.5rem!important;
+	}
+	.Tool-Two-content > li:nth-of-type(2) {
+		top: 0px;
+		left: 16rem!important;
+	}
+	.Tool-Two-content > li:nth-of-type(3) {
+		top: 0px;
+		left: 22.5rem!important;
+	}
+	.Tool-Two-content_radio {
+		width: 1.8rem;
+		height: 0.6rem;
+	}
+	.Tool-Two-content_radios {
+		font-size: 9px;
+	    top: -0.2rem;
+	}
+    .mainTwo-JobToggle {
+	    width: 46%;
+	    height: 10.5rem;
+	    margin: 0px;
+	    transform: translate(-10px,4.5rem);
+	    -moz-transform: translate(-10px,4.5rem);
+	    -webkit-transform: translate(-10px,4.5rem);
+	    -ms-transform: translate(-10px,4.5rem);
+    }
+    .mainTwo-JobToggle-first,
+	.mainTwo-JobToggle-second,
+	.mainTwo-JobToggle-third {
+	    width: 30%;
+	    height: 9rem;
+	    background-color: rgb(247,247,247);
+	    border: none;
+	    box-shadow: 0.1rem 0px 0.1rem rgb(230,230,230);
+	    border-radius: 0px;
+	    -moz-border-radius: 0px;
+	    -webkit-border-radius: 0px;
+	}
+	.mainTwo-JobToggle-third {
+		width: 37%;
+	}
+	.mainTwo-JobToggle-head  {
+	    height: 2.8rem;
+	    line-height: 2.8rem;
+	    font-size: 10px;
+	    font-weight: 500;
+	    color: rgba(51,70,95,0.8);
+	    border-bottom: 0.05rem solid #C8C8C8;
+	}
+	.mainTwo-JobToggle-content {
+		width: 95%;
+	    margin: 0px; 
+	    padding-left: 0.5rem;
+	}
+	.mainTwo-JobToggle-content > li {
+	    margin: 0.1rem 0.5rem;
+	}
+	.mainTwo-JobToggle-content > li > a {
+		color: rgb(105,120,125);
+	    font-size: 9px;
+	}  
+	.activeTwo-data {
+	    font-size: 11px!important;
+	}
+	
+	/*第三张图表*/
+    #mainThird-Salary {
+	    display: block;
+    	width: 40%;
+	    height: 27rem;
+	    margin-top: 4rem;
+	    margin-left: 1rem;
+	}
+	#mainThird-rank_Salary {
+	    display: block;
+    	width: 40%;
+	    height: 21rem;
+	    margin-left: 0px;
+	    transform: translateY(0rem);
+	    -moz-transform: translateY(0rem);
+	    -ms-transform: translateY(0rem);
+	    -webkit-transform: translateY(0rem);
+	}
+	.JobThird {
+	    width: 30%;
+	    height: 2rem;
+	    margin-top: 0px;
+	    margin-left: 0.5rem;
+	}
+	.JobThird-show {
+	    width: 6rem;
+	    height: 2rem;
+	    padding: 0px;
+	    line-height: 3.6rem;
+	}
+	.JobThird-show-text {
+	    font-size: 7px;
+	    font-weight: 100;
+	    line-height: 6px;
+	}
+	.JobThird-linear {
+	    width: 3.5rem;
+	    height: 2rem;
+	    margin-left: 0.5rem;
+	}
+	.JobThird-linear-icon {
+	    line-height: 1.4rem;
+	    font-size: 10px;
+	}
+	.JobThird-Job {
+	    width: 3rem;
+	    height: 1.7rem;
+	    line-height: 0rem;
+	    font-size: 11px;
+	    margin-left: -1.5rem;
+	}
+	.JobThird-average {
+	    display: block;
+	    width: 24%;
+	    height: 2.3rem;
+	    margin-left: 15rem;
+	    transform: translateY(-2.5rem);
+	    -moz-transform: translateY(-2.5rem);
+	    -webkit-transform: translateY(-2.5rem);
+	    -ms-transform: translateY(-2.5rem);
+	}
+	.JobThird-average > span {
+	    width: 31%;
+	    font-size: 9px;
+	    line-height: 23px;
+	}
+	.JobThird-average-iconback {
+		border-top: 1px solid rgb(228,60,89);
+	}
+	.JobThird-toggle {
+		display: block;
+	    width: 37%;
+	    height: 3rem;
+	    margin: 0;
+	    margin-left: 2rem;
+	    border-top: 1px solid #CCCCCC;
+	    border-top-right-radius: 0px;
+	    border-top-left-radius: 0px;
+	    box-shadow: 0px 8px 8px -12px rgba(0,0,0,.7);
+	    transform: translateY(-1rem);
+	    -moz-transform: translateY(-1rem);
+	    -webkit-transform: translateY(-1rem);
+	    -ms-transform: translateY(-1rem);
+	}
+	.row-small {
+	    width: 100%;
+	    margin: 0 auto;
+	    margin-right: 0px;
+	    margin-left: 0px;
+	}
+	.JobThird-toggle-Classify {
+	    height: 3rem;
+	    background-color: rgb(247,247,247);
+	}
+	.JobThird-toggle-Classify > i {
+		display: none;
+	}
+	.JobThird-toggle-Classify-head {
+	    line-height: 3rem;
+	    font-size: 10px;
+	} 
+	.JobThird-toggle-Classify-content {
+	    width: 100%;
+	    margin-left: 0px;
+	    background-color: rgb(247,247,247);
+	    border: 0px solid #CCCCCC;
+	    border-top: 0.3rem solid rgb(41,60,89);
+	    bottom: 70%;
+	}
+	.JobThird-toggle-Classify-content > li {
+	    height: 2.5rem;
+	    border-bottom: 0.03rem solid #CCCCCC;
+	}
+	.JobThird-toggle-Classify-content > li > a {
+	    font-size: 9px;
+	    line-height: 25px;
+	}
+	
+	/*第四张图表*/
+		/*职位搜索栏*/
+	#FourthJob_Control {
+	    width: 35%;
+	    height: 100%;
+	    left: 0%;
+	    top: 0;
+	}
+	.FourthJob, .FourthJob-search {
+	    width: 100%;
+	    height: 100%;
+	    margin-left: 0.4rem;
+	}
+	.FourthJob-search > div {
+	    width: 80%;
+	    height: 100%;
+	    margin-left: 0px;
+	    line-height: 4.5rem;
+	}
+	.FourthJob-put {
+	    height: 60%;
+	    border-bottom: 0.5px solid #F7F7F7;
+	    font-size: 10px!important;
+	    transform: translateY(-50%);
+	}
+	.FourthJob-put::-webkit-input-placeholder{ /*Webkit*/
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 10px;
+	}
+	.FourthJob-put::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 10px;
+	}
+	.FourthJob-put:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 10px;
+	}
+	.fa-FourthJob-icon {
+	    display: inline-block;
+	    width: 15%;
+	    height: 102%;
+	    padding-left: 0.2rem;
+	    transform: translateY(-28%);
+	}
+	.fa-FourthJob-icon:hover {
+		background-color: none!important;
+		transition: none!important;
+		-moz-transition: none!important;
+		-webkit-transition: none!important;
+		-ms-transition: none!important;
+	}
+	.FourthJob-icon {
+		margin-top: 5px;
+	    font-size: 14px;
+	    line-height: 2.8rem;
+	}
+	.ui-menu {
+		box-shadow: 0px 0px 0.2rem rgba(204,204,204,.5);
+	}
+	.ui-widget.ui-widget-content {
+		border: none!important;
+	}
+	.ui-menu > li > div {
+		height: 2rem;
+		line-height: 2rem;
+		font-size: 11px;
+	}
+	.ui-menu > li > div:hover {
+		font-size: 11px;
+	}
+	.container-small, .container-small-row, .container-small-row-col {
+		height: 100%!important;
+	}
+	/*地图*/
+	#mainFourth {
+	    width: 45%;
+	    height: 87%;
+   	 	margin-top: 3rem;
+	    margin-left: -1.5rem;
+	    overflow: hidden;
+	}
+	/*百度地图里程控件*/
+	.BMap_scaleCtrl {
+		width: 6.5rem!important;
+		height: 2.1rem!important;
+		top: 0.5rem!important;
+	    left: 0.5rem!important;
+	}
+	.BMap_scaleCtrl div.BMap_scaleTxt {
+		font-size: 10px!important;
+		line-height: 2.1rem!important;
+	}
+	.BMap_scaleHBar {
+		height: 0.3rem!important;
+	}
+	
+	/*第五张图表*/
+	#mainfifth {
+	    width: 42%;
+	    height: 50rem;
+	    margin-top: 5rem;
+	    margin-left: 1rem;
+	}
+}
+
+/*IPad端与大屏幕之间 最小768px宽度 最大992px*/
+@media only screen and (min-width: 768px) and (max-width:992px) {
+	/*外部框架*/
+	.Top-nav {
+		width: 83.5%;
+    	height: 4%;
+	}
+	.Top-nav > .home {
+	    font-size: 19px;
+	    line-height: 4rem;
+	}
+	.Eng_CN_toggle_responsive {
+	    height: 4rem;
+	    line-height: 4rem;
+	    right: 5%;
+	    font-size: 12px;
+	}
+	/*左右平滑块*/
+	.controlArrow.prev,.controlArrow.next {
+		width: 5%!important;
+	    height: 20%!important;
+	    bottom: 38%!important;
+	}
+	.controlArrow.prev {
+		left: 0px;
+	}
+	.controlArrow.next {
+	    right: 16.5%;
+	}
+	.mylist {
+		display: block;	
+		height: 0px;
+		width: 84%;
+	    left: 0;
+	    top: 52%;
+	}
+	.myLeft,.myright {
+		top: -1rem;
+		font-size: 20px;
+		animation: none;
+	    -webkit-animation: none;
+	    -moz-animation: none;
+	    -ms-animation: none;
+	    padding: 0px;
+	}
+	.myLeft {
+	    left: 1%;
+	}
+	.myright {
+		right: 2%;
+	}
+	hr {
+		width: 58%!important;
+    	border-top: 0.15rem solid  #CCCCCC!important;
+    	transform: translateX(12.5rem)!important;
+    	-moz-transform: translateX(12.5rem)!important;
+    	-ms-transform: translateX(12.5rem)!important;
+    	-webkit-transform: translateX(12.5rem)!important;
+	}
+	/*底部通栏*/
+	.Bottom_item_responsive {
+		width: 83%;
+	    height: 4.5rem;
+	    padding: 0 6rem;
+	    bottom: 0rem;
+	}
+	.Bottom_item_list > li {
+	    height: 4.5rem;
+	    line-height: 4.5rem;
+	    margin: 0 3.2rem;
+	}
+	.Bottom_item_list > li > a {
+	    font-size: 15px;
+	}
+	.Bottom_item_back {
+    	width: 3.5rem;
+    	height: 0.5rem;
+    }
+    
+	/*第一张图表*/
+	#main {
+		width: 75%;
+	    height: 50rem;
+	    margin: 1rem 4rem;
+	}
+	
+	.JobToggle_panel_esponsive {
+	    width: 66%;
+	    height: 32rem;
+	    margin: 0.8rem 8rem;
+	}
+	.JobToggle_panel_header {
+	    height: 3rem;
+	}
+	.JobToggle_panel_title {
+		line-height: 3rem;
+    	font-size: 15px;
+	}
+	.JobToggle_panel_interval {
+	    margin: 0.4rem auto;
+    	border-top: 0.7rem dashed;
+	} 
+	.container {
+	    width: 100%;
+	}
+	.JobToggle_panel_body {
+		height: 27rem;
+    	margin-top: 0.8rem;
+	}
+	.JobToggle_panel_body_Part {
+	    font-size: 15px;
+    	padding: 1rem 1.5rem;
+    	border-bottom: 0.15rem solid rgb(221,65,89);
+	}
+	.JobToggle_panel_body_content {
+	    margin-top: 2.1rem;
+	}
+	.JobToggle_panel_body_content > li {
+	    margin-top: 1rem;
+	}
+	.JobToggle_panel_body_content > li > a {
+	    font-size: 13px;
+	    padding: 0.7rem;
+	}
+	.Tool {
+	    width: 100%;
+	    height: 6rem;
+	    transform: translate(-23.4rem,-0.6rem);
+	    -moz-transform: translate(-23.4rem,-0.6rem);
+	    -webkit-transform: translate(-23.4rem,-0.6rem);
+	    -ms-transform: translate(-23.4rem,-0.6rem);
+	}
+	.Tool_ul {
+		padding: 0px 7.8rem;
+	    padding-top: 0.5rem;
+	    border-top: 0.15rem solid #CCCCCC;
+	    border-bottom: 0.15rem solid #CCCCCC;
+	}
+	.Tool_ul > li {
+    	width: 14rem;
+    	height: 5rem;
+    }
+    .Tool_ul > li > a {
+    	font-size: 12px;
+    	padding: 0.8rem 1.5rem;
+    	text-align: center;
+    }
+    .Tool_ul > li > a > i {
+    	margin-right: 0.3rem;
+    }
+	.close_Point {
+		display: inline-block!important;
+	}
+    
+    /*第二张图表*/
+   .mainTwo-TopJob {
+   		width: 7.5rem;
+	    height: 2.5rem;
+	    font-size: 11px;
+	    margin: 0;
+	    margin-top: 4rem;
+	    padding-top: 0;
+	    transform: translateX(33.1rem);
+	    -moz-transform: translateX(33.1rem);
+	    -ms-transform: translateX(33.1rem);
+	    -webkit-transform: translateX(33.1rem);
+	    font-weight: 400;
+	    border-radius: 0px 0px 1.3rem 1.3rem;
+	    -moz-border-radius: 0px 0px 1.3rem 1.3rem;
+	    -webkit-border-radius: 0px 0px 1.3rem 1.3rem;
+   }
+   #mainTwo-school {
+   		display: block;
+	    width: 75%;
+	    height: 30rem;
+	    -moz-transform: translate(3.8rem,2.5rem);
+	    -webkit-transform: translate(3.8rem,2.5rem);
+	    -ms-transform: translate(3.8rem,2.5rem);
+   }
+   #mainTwo-salary {
+   		display: block;
+	    width: 70%;
+	    height: 30rem;
+	    transform: translate(6rem,8.5rem);
+	    -moz-transform: translate(6rem,8.5rem);
+	    -ms-transform: translate(6rem,8.5rem);
+	    -webkit-transform: translate(6rem,8.5rem);
+	}
+   .Tool-Two {
+   		width: 80%;
+	    height: 2.5rem;
+	    margin-left: 0px;
+	    transform: translate(3rem,-25.5rem);
+	    -moz-transform: translate(3rem,-25.5rem);
+	    -webkit-transform: translate(3rem,-25.5rem);
+	    -ms-transform: translate(3rem,-25.5rem);
+	    font-size: 12px;
+   }
+   .Tool-Two-content > li {
+   	    width: 12%;
+	    height: 2.5rem;
+	    margin-top: 0px;
+	    line-height: 2.5rem;
+	}
+ 	.Tool-Two-content > li:nth-of-type(1) {
+ 		left: 28%!important;
+	}
+	.Tool-Two-content > li:nth-of-type(2) {
+		top: 0px;
+		left: 43%!important;
+	}
+	.Tool-Two-content > li:nth-of-type(3) {
+		top: 0px;
+		left: 57%!important;
+	}
+	.Tool-Two-content_radio {
+		width: 2.3rem;
+		height: 0.8rem;
+	}
+	.Tool-Two-content_radios {
+		font-size: 11px;
+    	top: -0.2rem;
+	}
+    .mainTwo-JobToggle {
+	    width: 80%;
+	    height: 13rem;
+	    transform: translate(4rem,11.5rem);
+	    -moz-transform: translate(4rem,11.5rem);
+	    -webkit-transform: translate(4rem,11.5rem);
+	    -ms-transform: translate(4rem,11.5rem);
+	}
+    .mainTwo-JobToggle-first,
+	.mainTwo-JobToggle-second,
+	.mainTwo-JobToggle-third {
+	    width: 28%;
+	    height: 11.5rem;
+	    background-color: rgb(247,247,247);
+	    margin-left: 1rem;
+	    border: none;
+	    box-shadow: 0.2rem 0px 0.5rem rgb(230,230,230);
+	    border-radius: 0.5rem;
+	    -moz-border-radius: 0.5rem;
+	    -webkit-border-radius: 0.5rem;
+	}
+	.mainTwo-JobToggle-third {
+		width: 30%;
+	}
+	.mainTwo-JobToggle-head  {
+	    height: 3.5rem;
+	    line-height: 3.5rem;
+	    font-size: 13px;
+	    font-weight: 600;
+	    color: rgba(51,70,95,0.8);
+	    border-bottom: 0.1rem solid #C8C8C8;
+	}
+	.mainTwo-JobToggle-content {
+		width: 95%;
+	    margin: 0px; 
+	    padding-left: 0.5rem;
+	}
+	.mainTwo-JobToggle-content > li {
+	    margin: 0.5rem 0.9rem;
+	}
+	.mainTwo-JobToggle-content > li > a {
+		color: rgb(105,120,125);
+    	font-size: 10px;
+	}
+	/*第三张图表*/
+    #mainThird-Salary {
+	    width: 72%;
+	    height: 35rem;
+	    margin-top: 7rem;
+	    margin-left: 5rem;
+	}
+	#mainThird-rank_Salary {
+	    width: 72%;
+	    height: 35rem;
+	    margin-top: 4rem;
+	    margin-left: 5rem;
+	    transform: translateY(0rem);
+	    -moz-transform: translateY(0rem);
+	    -ms-transform: translateY(0rem);
+	    -webkit-transform: translateY(0rem);
+	}
+	.JobThird {
+	    width: 30%;
+	    height: 3rem;
+	    margin-top: 0px;
+	    margin-left: 8rem;
+	}
+	.JobThird-show {
+	    width: 9rem;
+	    height: 2.7rem;
+	    padding: 0px;
+	    line-height: 4.8rem;
+	}
+	.JobThird-show-text {
+	    font-size: 13px;
+	    font-weight: 600;
+	}
+	.JobThird-linear {
+	    width: 5.5rem;
+	    height: 3rem;
+	    margin-left: 2rem;
+	}
+	.JobThird-linear-icon {
+	    line-height: 2.4rem;
+    	font-size: 13px;
+	}
+	.JobThird-Job {
+	    width: 5rem;
+	    height: 2.4rem;
+	    line-height: 0rem;
+	    font-size: 14px;
+	    margin-left: -1.5rem;
+	}
+	.JobThird-average {
+	    display: block;
+	    width: 35%;
+	    height: 3rem;
+	    margin-left: 34rem;
+	    transform: translateY(-3rem);
+	    -moz-transform: translateY(-3rem);
+	    -webkit-transform: translateY(-3rem);
+	    -ms-transform: translateY(-3rem);
+	}
+	.JobThird-average > span {
+	    width: 31%;
+	    font-size: 13px;
+	    line-height: 2.8rem;
+	}
+	.JobThird-average-iconback {
+		border-top: 1.5px solid rgb(228,60,89);
+	}
+	.JobThird-toggle {
+		display: block;
+	    width: 76%;
+	    height: 4rem;
+	    margin: 0;
+	    margin-left: 3rem;
+	    border-top: 1px solid #CCCCCC;
+	    border-top-right-radius: 0px;
+	    border-top-left-radius: 0px;
+	    box-shadow: 0px 10px 10px -12px rgba(0,0,0,.7);
+	    transform: translateY(2rem);
+	    -moz-transform: translateY(2rem);
+	    -webkit-transform: translateY(2rem);
+	    -ms-transform: translateY(2rem);
+	}
+	.row-small {
+	    width: 100%;
+	    margin: 0 auto;
+	    margin-right: 0px;
+	    margin-left: 0px;
+	}
+	.JobThird-toggle-Classify {
+	    height: 4rem;
+	    background-color: rgb(247,247,247);
+	}
+	.JobThird-toggle-Classify > i {
+		display: inline-block;
+	}
+	.JobThird-toggle-Classify-head {
+	    line-height: 4rem;
+    	font-size: 15px;
+	} 
+	.JobThird-toggle-Classify-content {
+	    width: 100%;
+	    margin-left: 0px;
+	    background-color: rgb(247,247,247);
+	    border: 0px solid #CCCCCC;
+	    border-top: 0.3rem solid rgb(41,60,89);
+	    bottom: 70%;
+	}
+	.JobThird-toggle-Classify-content > li {
+	    height: 2.5rem;
+	    border-bottom: 0.03rem solid #CCCCCC;
+	}
+	.JobThird-toggle-Classify-content > li > a {
+	    font-size: 9px;
+	    line-height: 25px;
+	}
+	
+	/*第四张图表*/
+		/*职位搜索栏*/
+	#FourthJob_Control {
+	    width: 35%;
+	    height: 100%;
+	    left: 0%;
+	    top: 0;
+	}
+	.FourthJob, .FourthJob-search {
+	    width: 100%;
+	    height: 100%;
+	    margin-left: 0.4rem;
+	}
+	.FourthJob-search > div {
+	    width: 80%;
+	    height: 100%;
+	    margin-left: 0px;
+	    line-height: 4.5rem;
+	}
+	.FourthJob-put {
+	    height: 60%;
+	    border-bottom: 0.5px solid #F7F7F7;
+	    font-size: 12px!important;
+	    transform: translateY(-20%);
+	}
+	.FourthJob-put::-webkit-input-placeholder{ /*Webkit*/
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 12px!important;
+	}
+	.FourthJob-put::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 12px!important;
+	}
+	.FourthJob-put:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 12px!important;
+	}
+	.fa-FourthJob-icon {
+	    display: inline-block;
+	    width: 15%;
+	    height: 100%;
+	    padding-left: 0.4rem;
+	    transform: translateY(-25%);
+	}
+	.FourthJob-icon {
+	    margin-top: 10px;
+	    font-size: 14px;
+	    line-height: 2.8rem;
+	}
+	.ui-menu {
+		box-shadow: 0px 0px 0.2rem rgba(204,204,204,.5);
+	}
+	.ui-widget.ui-widget-content {
+		border: none!important;
+	}
+	.ui-menu > li > div {
+		height: 3rem;
+		line-height: 3rem;
+		font-size: 13px;
+	}
+	.ui-menu > li > div:hover {
+		font-size: 13px;
+	}
+	.container-small, .container-small-row, .container-small-row-col {
+		height: 100%!important;
+	}
+	/*地图*/
+	#mainFourth {
+	    width: 87%;
+    	height: 92%;
+    	margin-top: 4rem;
+	    margin-left: -1.5rem;
+	    overflow: hidden;
+	}
+	/*百度地图里程控件*/
+	.BMap_scaleCtrl {
+		width: 7.5rem!important;
+    	height: 2.5rem!important;
+		top: 0.5rem!important;
+	    left: 0.5rem!important;
+	}
+	.BMap_scaleCtrl div.BMap_scaleTxt {
+		font-size: 12px!important;
+		line-height: 2.1rem!important;
+	}
+	.BMap_scaleHBar {
+		height: 0.4rem!important;
+	}
+	
+	/*第五张图表*/
+	#mainfifth {
+	    width: 78%;
+    	height: 80rem;
+   	 	margin-top: 8rem;
+    	margin-left: 2rem;
+	}
+}
+
+/*大屏幕端与PC端之间  最小992px 最大 1200px*/
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+	#main {
+		width: 70rem;
+	    height: 55rem;
+	    margin-top: 15rem;
+	    z-index: 98!important;
+	    transform: translateX(7rem);
+	    -moz-transform: translateX(7rem);
+	    -ms-transform: translateX(7rem);
+	    -webkit-transform: translateX(7rem);
+	}
+	
+	/*工具栏*/
+	.Tool {
+    	margin: 0 0px;
+   		transform: translate(7.5rem,2rem);
+   		-ms-transform: translate(7.5rem,2rem);
+   		-webkit-transform: translate(7.5rem,2rem);
+   		-moz-transform: translate(7.5rem,2rem);
+	}
+	.Tool_ul {
+		margin-right: 8rem;
+	}
+	/*左右平滑块*/
+	.controlArrow.prev {
+		width: 5.5rem!important;
+	    left: 20rem;
+	}
+	.controlArrow.next {
+		width: 5.5rem!important;
+	}
+	.controlArrow {
+	    width: 6rem;
+	    height: 47%;
+	}
+	.myLeft {
+		left: 7rem;
+	}
+	.myright {
+		right: 1.5rem;
+	}
+	.mylist {
+		height:0px!important;
+		top: 55%;
+	}
+	
+	/*工具栏提示框*/
+	.Toolbar_Tip {
+	    width: 25rem;
+	    top: -5rem;
+	    right: 1.5rem;
+	    animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	    -moz-animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	    -ms-animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	    -webkit-animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	}
+	@keyframes  Tip{
+		0% {
+			top: -5rem;
+		}
+		35% {
+			top: 10rem;
+		}
+		75% {
+			top: 9rem;
+		}
+		90% {
+			top: 9.5rem;
+		}
+		100% {
+			top: 10rem;
+		}
+	}
+	@-moz-keyframes Tip{
+		0% {
+			top: -5rem;
+		}
+		35% {
+			top: 10rem;
+		}
+		75% {
+			top: 9rem;
+		}
+		90% {
+			top: 9.5rem;
+		}
+		100% {
+			top: 10rem;
+		}
+	}
+	@-ms-keyframes Tip{
+		0% {
+			top: -5rem;
+		}
+		35% {
+			top: 10rem;
+		}
+		75% {
+			top: 9rem;
+		}
+		90% {
+			top: 9.5rem;
+		}
+		100% {
+			top: 10rem;
+		}
+	}
+	@-webkit-keyframes Tip{
+		0% {
+			top: -5rem;
+		}
+		35% {
+			top: 10rem;
+		}
+		75% {
+			top: 9rem;
+		}
+		90% {
+			top: 9.5rem;
+		}
+		100% {
+			top: 10rem;
+		}
+	}
+	
+	/*职位选择面板*/
+	.Job_modal {
+		right: 0;
+	}
+	
+	/*第二张图表*/
+   .mainTwo-TopJob {
+        border-radius: 0px 0px 1.5rem 1.5rem;
+    	-moz-border-radius: 0px 0px 1.5rem 1.5rem;
+   		-webkit-border-radius: 0px 0px 1.5rem 1.5rem;
+   }
+   #mainTwo-school {
+   		display: block;
+	    width: 92%;
+	    height: 40rem;
+	    -moz-transform: translate(-0.2rem,4rem);
+	    -webkit-transform: translate(-0.2rem,4rem);
+	    -ms-transform: translate(-0.2rem,4rem);
+	}
+   #mainTwo-salary {
+   		display: block;
+	    width: 90%;
+	    height: 40rem;
+	    transform: translate(1rem,8.5rem);
+	    -moz-transform: translate(1rem,8.5rem);
+	    -ms-transform: translate(1rem,8.5rem);
+	    -webkit-transform: translate(1rem,8.5rem);
+	}
+   .Tool-Two {
+   		width: 90%;
+	    height: 30px;
+	    margin-left: 0px;
+	    transform: translate(0px,-35rem);
+	    -ms-transform: translate(0px,-35rem);
+	    -webkit-transform: translate(0px,-35rem);
+	    -moz-transform: translate(0px,-35rem);
+	    font-size: 17px;
+   }
+   .Tool-Two-content > li {
+   	    width: 16%;
+	    height: 3rem;
+	    margin-top: 0px;
+	    line-height: 3rem;
+	}
+ 	.Tool-Two-content > li:nth-of-type(1) {
+ 		left: 20%!important
+	}
+	.Tool-Two-content > li:nth-of-type(2) {
+		top: 0px!important;
+		left: 41%!important;
+	}
+	.Tool-Two-content > li:nth-of-type(3) {
+		top: 0px!important;
+		left: 60%!important;
+	}
+	.Tool-Two-content_radio {
+		width: 2.3rem;
+		height: 0.8rem;
+	}
+	.Tool-Two-content_radios {
+		font-size: 11px;
+    	top: -0.2rem;
+	}
+    .mainTwo-JobToggle {
+	    width: 85%;
+	    height: 12rem;
+	    transform: translate(-3rem,14rem);
+	    -moz-transform: translate(-3rem,14rem);
+	    -ms-transform: translate(-3rem,14rem);
+	    -webkit-transform: translate(-3rem,14rem);
+	}
+    .mainTwo-JobToggle-first,
+	.mainTwo-JobToggle-second,
+	.mainTwo-JobToggle-third {
+	    width: 30%;
+	    height: 11.5rem;
+	    background-color: rgb(247,247,247);
+	    border: none;
+	    box-shadow: 0.2rem 0px 0.5rem rgb(230,230,230);
+	    border-radius: 0.5rem;
+	    -moz-border-radius: 0.5rem;
+	    -webkit-border-radius: 0.5rem;
+	    margin-left: 0.2rem;
+	}
+	.mainTwo-JobToggle-third {
+		width: 37%;
+	}
+	.mainTwo-JobToggle-head  {
+	    height: 4rem;
+    	line-height: 4rem;
+    	font-size: 14px;
+   	 	font-weight: 600;
+   	 	color: rgba(51,70,95,0.8);
+    	border-bottom: 0.1rem solid #C8C8C8;
+	}
+	.mainTwo-JobToggle-content {
+		width: 95%;
+	    margin: 0px; 
+	    padding-left: 0.5rem;
+	}
+	.mainTwo-JobToggle-content > li {
+	    margin: 0.5rem 1.5rem;
+	}
+	.mainTwo-JobToggle-content > li > a {
+		color: rgb(105,120,125);
+    	font-size: 12px;
+	}
+	
+	/*第三张图表*/
+    #mainThird-Salary {
+	    display: block;
+	    width: 92%;
+	    height: 40rem;
+	    margin-top: 10rem;
+	    margin-left: 7rem;
+	}
+	#mainThird-rank_Salary {
+	    display: block;
+	    width: 92%;
+	    height: 40rem;
+	    margin-top: 10rem;
+	    margin-left: 7rem;
+	    transform: translateY(0rem);
+	    -moz-transform: translateY(0rem);
+	    -ms-transform: translateY(0rem);
+	    -webkit-transform: translateY(0rem);
+	}
+	.JobThird {
+	    width: 30%;
+	    height: 3rem;
+	    margin-top: 0px;
+	    margin-left: 10rem;
+	}
+	.JobThird-show {
+	    width: 10rem;
+	    height: 3rem;
+	    padding: 0px;
+	    line-height: 5.6rem;
+	}
+	.JobThird-show-text {
+	    font-size: 14px;
+    	font-weight: 600;
+	}
+	.JobThird-linear {
+	    width: 5.5rem;
+	    height: 2.5rem;
+	    margin-left: 2rem;
+	}
+	.JobThird-linear-icon {
+	    line-height: 1.4rem;
+    	font-size: 14px;
+	}
+	.JobThird-Job {
+	    width: 5rem;
+	    height: 2.7rem;
+	    line-height: 0rem;
+	    font-size: 15px;
+	    margin-left: -1.5rem;
+	    font-weight: 600;
+	}
+	.JobThird-average {
+	    display: block;
+	    width: 47%;
+	    height: 3.2rem;
+	    margin-left: 38rem;
+	    transform: translateY(-2.5rem);
+	    -moz-transform: translateY(-2.5rem);
+	    -webkit-transform: translateY(-3.5rem);
+	    -ms-transform: translateY(-2.5rem);
+	}
+	.JobThird-average > span {
+	    width: 31%;
+	    font-size: 13px;
+	    line-height: 3rem;
+	}
+	.JobThird-average-iconback {
+		border-top: 1.5px solid rgb(228,60,89);
+	}
+	.JobThird-toggle {
+		display: block;
+	    width: 100%;
+	    height: 4rem;
+	    margin: 0;
+	    margin-left: 6rem;
+	    border-top: 1px solid #CCCCCC;
+	    border-top-right-radius: 0px;
+	    border-top-left-radius: 0px;
+	    box-shadow: 0px 10px 10px -12px rgba(0,0,0,.7);
+	    transform: translateY(5rem);
+	    -moz-transform: translateY(5rem);
+	    -webkit-transform: translateY(5rem);
+	    -ms-transform: translateY(5rem);
+	}
+	.row-small {
+	    width: 100%;
+	    margin: 0 auto;
+	    margin-right: 0px;
+	    margin-left: 0px;
+	}
+	.JobThird-toggle-Classify {
+	    height: 4rem;
+    	background-color: rgb(255,255,255);
+	}
+	.JobThird-toggle-Classify > i {
+		display: inline-block;
+	}
+	.JobThird-toggle-Classify-head {
+	    line-height: 4rem;
+    	font-size: 16px;
+	} 
+	.JobThird-toggle-Classify-content {
+	    width: 100%;
+	    margin-left: 0px;
+	    background-color: rgb(247,247,247);
+	    border: 0px solid #CCCCCC;
+	    border-top: 0.3rem solid rgb(41,60,89);
+	    bottom: 70%;
+	}
+	.JobThird-toggle-Classify-content > li {
+	    height: 2.5rem;
+	    border-bottom: 0.03rem solid #CCCCCC;
+	}
+	.JobThird-toggle-Classify-content > li > a {
+	    font-size: 9px;
+	    line-height: 25px;
+	}
+	
+	/*第四张图表*/
+		/*职位搜索栏*/
+	#FourthJob_Control {
+	    width: 35%;
+	    height: 100%;
+	    left: 0%;
+	    top: 0;
+	}
+	.FourthJob, .FourthJob-search {
+	    width: 100%;
+	    height: 100%;
+	    margin-left: 0.4rem;
+	}
+	.FourthJob-search > div {
+	    width: 80%;
+	    height: 100%;
+	    margin-left: 0px;
+	    line-height: 4.5rem;
+	}
+	.FourthJob-put {
+	    height: 60%;
+	    border-bottom: 0.5px solid #F7F7F7;
+	    font-size: 14px;
+	    transform: translateY(0%);
+	}
+	.FourthJob-put::-webkit-input-placeholder{ /*Webkit*/
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 14px;
+	}
+	.FourthJob-put::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 14px;
+	}
+	.FourthJob-put:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+	    color: #F7F7F7;
+		font-weight: 600;
+		font-size: 14px;
+	}
+	.fa-FourthJob-icon {
+	    display: inline-block;
+	    width: 15%;
+	    height: 100%;
+	    padding-left: 0.4rem;
+	    transform: translateY(-10%);
+	}
+	.FourthJob-icon {
+	    margin-top: 10px;
+	    font-size: 21px;
+	    line-height: 2.8rem;
+	}
+	.ui-menu {
+		box-shadow: 0px 0px 0.2rem rgba(204,204,204,.5);
+	}
+	.ui-widget.ui-widget-content {
+		border: none!important;
+	}
+	.ui-menu > li > div {
+		height: 3.5rem;
+		line-height: 3.5rem;
+		font-size: 15px;
+	}
+	.ui-menu > li > div:hover {
+		font-size: 15px;
+	}
+	.container-small, .container-small-row, .container-small-row-col {
+		height: 100%!important;
+	}
+	/*地图*/
+	#mainFourth {
+	    width: 100%;
+	    height: 96.5%;
+	    margin-top: 5rem;
+	    margin-left: 1.5rem;
+	    overflow: hidden;
+	}
+	/*百度地图里程控件*/
+	.BMap_scaleCtrl {
+		width: 9.5rem!important;
+	    height: 3rem!important;
+	    top: 2rem!important;
+	    left: 3rem!important;
+	}
+	.BMap_scaleCtrl div.BMap_scaleTxt {
+		font-size: 14px!important;
+		line-height: 2.1rem!important;
+	}
+	.BMap_scaleHBar {
+		height: 0.5rem!important;
+	}
+	
+	/*第五张图表*/
+	#mainfifth {
+	    width: 90%;
+	    height: 100rem;
+	    margin-top: 10rem;
+	    margin-left: 2rem;
+	}
+}
+
+/*PC端,最小分辨率为 1700px , 大于1700px*/
+@media only screen and (min-width: 1700px) {
+	/*外部框架区域*/
+	.Top-nav {
+		height: 60px;
+	}
+	.home {
+		height: 60px;
+		line-height: 60px;
+		font-size: 30px;
+	}
+	.Eng_CN-border {
+		width: 200px;
+	    height: 60px;
+	    right: 30px;
+	}
+	.Eng_CN, .Eng_CN_to {
+		width: 95px;
+    	height: 60px;
+    	line-height: 60px;
+    	font-size: 19px;
+	}
+	.Eng_CN > i {
+		font-weight: 600;
+	}
+	.Left_item {
+		width: 260px;
+	}
+	.Options {
+   	 	height: 150px;
+    	margin-top: 60px;
+    }
+    .Options-Header {
+    	height: 60px;
+    	line-height: 60px;
+    	border-left: 4px solid rgb(228,60,85);
+    }
+    .Options-Header > i {
+     	font-size: 17px;
+    }
+    .icon_back {
+    	height: 60px!important;
+    }
+    .Options-Header-title {
+    	font-size: 17px;
+        line-height: 60px;
+    }
+    .Options-Header-icon {
+    	font-size: 16px;
+    	font-weight: 500;
+    	line-height: 60px;
+    }
+    #option {
+        height: 160px;
+    }
+    #option > li {
+    	height: 35px;
+        font-size: 15px;
+        line-height: 35px;
+    }
+    .Options-footer {
+    	height: 55px;
+    	line-height: 45px;
+    	font-size: 21px;
+    	border-top: 3px solid rgb(228,61,89);
+    }
+    .mynav {
+    	height: auto;
+    }
+    .mynav > li {
+        height: 60px;
+        line-height: 60px;
+    }
+    .icons {
+    	font-size: 22px;
+    }
+    .mynav > li > a {
+    	font-size: 17px;
+    	line-height: 60px;
+    }
+    .FourthJob {
+    	height: 60px;
+    }
+    .FourthJob-search {
+    	height: 60px;
+    }
+    .FourthJob-search > div {
+        height: 45px;
+    }
+    .FourthJob-put {
+        font-size: 17px!important;
+        border-bottom: 1.2px solid #F7F7F7;
+    }
+    .FourthJob-put::-webkit-input-placeholder {
+		color:#F7F7F7;
+		font-weight:600;
+		font-size:17px;
+	}
+	.FourthJob-put:-moz-input-placeholder {
+		color:#F7F7F7;
+		font-weight:600;
+		font-size:17px;
+	}
+	.FourthJob-put:-ms-input-placeholder {
+		color:#F7F7F7;
+		font-weight:600;
+		font-size:17px;
+	}
+    .fa-FourthJob-icon {
+    	height: 60px;
+    }
+    .FourthJob-icon {
+    	line-height: 60px;
+        font-size: 23px;
+    }
+    .controlArrow.prev {
+	    left: 260px;
+	    width: 130px!important;
+	}
+	.myLeft {
+	    left: 55px;
+	}
+	.myLeft,.myright {
+		font-size: 22px;
+	}
+	/*地图搜索栏*/
+	.ui-menu > li > div {
+	    height: 50px;
+	    line-height: 50px;
+	    font-size: 17.4px;
+	}
+	.ui-menu > li > div:hover {
+		font-size: 17.4px;
+	}
+	
+	/*第一张图表区域*/
+	#First_chart {
+		margin-top: 60px!important;
+	}
+	#main {
+	    width: 85%;
+	    height: 640px;
+	    margin-top: 60px;
+	}
+	.Toolbar_Tip {
+		width: 330px;
+    	height: 40px;
+    	right: 230px; 
+    	animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	    -moz-animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	    -ms-animation: Tips 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	    -webkit-animation: Tip 1.5s ease 1.5s forwards,Tip_opa 1s ease 4s forwards;
+	}
+	.Toolbar_Tip_text {
+		line-height: 40px;
+    	font-size: 14px;
+	}
+	.Tip_close {
+	    line-height: 0.5;
+	}
+	.modal-dialog {
+	    width: 50%;
+	}
+	.Job_header > .modal-title {
+	    font-size: 19px;
+	}
+	.Job_close {
+		width: 50px;
+    	height: 30px;
+	}
+	.Job_close > button > span {
+	    font-size: 30px;
+	}
+	.modal_part > span {
+		font-size: 19px;
+	}
+	.Job_list > li {
+		margin-left: 10px;
+		height: 25px;
+	}
+	.Job_list > li > a {
+		line-height: 25px;
+		font-size: 16px;
+	}
+	.Tool {
+		width: 55%;
+	    height: 65px;
+	    margin: 0 auto;
+	    transform: translate(-110px,60px);
+	    -moz-transform: translate(-110px,60px);
+	    -ms-transform: translate(-110px, 25px);
+	    -webkit-transform: translate(-110px,60px);
+	}
+	.Job_toggle {
+	    width: 120px;
+	    height: 40px;
+	}
+	.Job_control {
+	    width: 100%;
+	    height: 40px;
+	    font-size: 15px;
+	    line-height: 1.7;
+	    margin-top: 2px;
+	}
+	.Tool_ul {
+	    width: 72%;
+	    height: 50px;
+	}
+	.Tool_ul > li {
+	    transform: translateY(80px);
+	    -moz-transform: translateY(80px);
+	    -webkit-transform: translateY(80px);
+	    -ms-transform: translateY(80px);
+	}
+	.Tool_ul >li > a {
+	    font-size: 14px;
+	}
+	.nav > li > a {
+	    padding: 13px 15px;
+	}
+	
+	/*第二张图表*/
+	.mainTwo-TopJob {
+		font-size: 17px;
+    	width: 115px;
+    	height: 37px;
+	    margin: 59px auto;
+	    transform: translateX(-155px);
+	    -moz-transform: translateX(-155px);
+	    -ms-transform: translateX(-155px);
+	    -webkit-transform: translateX(-155px);
+	}
+	#mainTwo-school {
+	    width: 43%;
+	    height: 550px;
+	    transform: translate(80px,40px);
+	    -moz-transform: translate(80px,40px);
+	    -webkit-transform: translate(80px,40px);
+	    -ms-transform: translate(80px,40px);
+	}
+	#mainTwo-salary {
+	    width: 48%;
+	    height: 550px;
+	    transform: translate(35px,40px);
+	    -webkit-transform: translate(35px,40px);
+	    -ms-transform: translate(35px,40px);
+	    -moz-transform: translate(35px,40px);
+	}
+	.Tool-Two {
+	    display: block;
+	    width: 115px;
+	    height: 110px;
+	    margin-left: 80px;
+	    padding-left: 20px;
+	    transform: translateY(-100px);
+	    -moz-transform: translateY(-100px);
+	    -webkit-transform: translateY(-100px);
+	    -ms-transform: translateY(-100px);
+	}
+	.Tool-Two-content > li {
+		height: 30px;
+    	margin-top: 15px;
+    	line-height: 30px;
+	    font-size: 17px;
+	}
+	.Tool-Two-content > li:nth-of-type(1) {
+	    top: 0px;
+	}
+	.Tool-Two-content > li:nth-of-type(2) {
+	    top: 31px;
+	}
+	.Tool-Two-content > li:nth-of-type(3) {
+	    top: 65px;
+	}
+	.mainTwo-TopJob {
+		font-size: 18px;
+	}
+	.mainTwo-JobToggle {
+	    height: 150px;
+	    transform: translate(-70px,-40px);
+	    -webkit-transform: translate(-70px,-40px);
+	    -moz-transform: translate(-70px,-55px);
+	    -ms-transform: translate(-70px, -80px);
+	}
+	.mainTwo-JobToggle-first, 
+	.mainTwo-JobToggle-second, 
+	.mainTwo-JobToggle-third {
+	    height: 150px;
+	    border: 1px solid #65726E;
+	}
+	.mainTwo-JobToggle-head {
+		height: 40px;
+	    line-height: 40px;
+	    font-size: 18px;
+	}
+	.mainTwo-JobToggle-content > li {
+		margin: 9px 6px;
+	}
+	.mainTwo-JobToggle-first > ul > li:nth-of-type(3) {
+	 	transform: translateX(-45px);
+	}
+	.mainTwo-JobToggle-first > ul > li:nth-of-type(4) {
+	 	transform: translate(70px,-30px);
+	}
+	.mainTwo-JobToggle-content > li > a {
+	    font-size: 15px;
+	}
+	.activeTwo-data {
+    	font-size: 17px!important;
+    }
+    
+    /*第三张图表*/
+   #mainThird-Salary {
+	    width: 52%;
+	    height: 550px;
+	    margin-top: 120px;
+	    margin-left: 90px;
+	}
+	#mainThird-rank_Salary {
+	    width: 30%;
+	    height: 500px;
+	    margin-left: 40px;
+	}
+	.JobThird {
+	    height: 40px;
+	    margin-top: 20px;/*W3C IE8+*/
+	    _margin-top: 0px; /*IE6*/
+	    *margin-top: 0px;/*IE7*/
+	    margin-left: 18%;
+	}
+	.JobThird-show {
+	    width: 90px;
+		height: 35px;
+    	padding: 5px;
+	}
+	.JobThird-show-text {
+	    font-size: 15px;
+	}
+	.JobThird-linear {
+	    margin-left: 15px;
+	    font-size: 15px;
+	}
+	.JobThird-Job {
+		line-height: 7px;
+	    font-size: 18px;
+	}
+	.JobThird-average {
+	    height: 35px;
+	    margin-left: 31rem;
+	}
+	.JobThird-average > span {
+		font-size: 15px;
+		line-height: 33px;
+	}
+	.JobThird-average-iconback {
+		border-top: 2.5px solid rgb(228,60,89);
+	}
+	.JobThird-toggle {
+		height: 50px;
+    	margin: 50px auto;
+    	-ms-transform: translate(0px,-10px);
+	}
+	.JobThird-toggle-Classify-head {
+		line-height: 50px;
+    	font-size: 18px;
+	}
+	.JobThird-toggle-Classify > i {
+		font-size: 19px;
+	}
+	.JobThird-toggle-Classify-content > li {
+	    height: 36px;
+	}
+	.JobThird-toggle-Classify-content > li > a {
+		font-size: 15px;
+    	line-height: 36px;
+	}
+	.activeThird-data {
+		font-size: 17px!important;
+	}
+	
+	/*第四张图表*/
+	#mainFourth {
+	    width: 97%;
+	    height: 920px;
+	    margin-top: 60px;
+	    margin-left: 7rem;
+	    box-shadow: 0px 0px 2px rgb(238,238,238);
+	}
+	.BMap_scaleCtrl {
+	    height: 27px!important;
+		left: 95px!important;
+	}
+	.BMap_scaleCtrl div.BMap_scaleTxt {
+	    font-size: 15px!important;
+	}
+	.BMap_stdMpCtrl {
+	    margin-left: 25px!important;
+	}
+	.BMap_stdMpPan {
+	    width: 52px!important;
+	    height: 50px!important;
+	}
+	.BMap_stdMpPan .BMap_button {
+	    height: 18px!important;
+	    width: 18px!important;
+	}
+	
+	/*第五张图表*/
+	#mainfifth {
+		width: 75%;
+	    height: 740px;
+	    margin-top: 110px;
+	    margin-left: 90px;
+	}
+}

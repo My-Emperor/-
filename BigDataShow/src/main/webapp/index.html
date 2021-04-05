@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+	<head lang="EN">
+		<title>招聘信息数据展示</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content = "width=device-width,initial-scale = 1.0,user-scalable = no" > 
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA=Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="Content-language" content="zh-cn">
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/Project/Slides.css"/>
+		<link rel="stylesheet" href="css/Project/Resonsive.css" />
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/fullpage/jquery.fullPage.min.js"></script>
+		<script src="js/fullpage/jquery.easing-1.3.2/jquery.easing.min.js"></script>
+		<script src="http://api.map.baidu.com/api?v=3.0&ak=yuPe5S4ZB5x1Pn0unD5tvCjFClWvl3np"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/bmap.min.js"></script>
+		<script defer="defer" src="js/Project/General-options.js"></script>
+		<script src="js/Project/First_slide.js"></script>
+		<script src="js/Project/Second_slide.js"></script>
+		<script src="js/Project/Third_slide.js"></script>
+		<script src="js/Project/Fourth_slide.js"></script>
+		<script src="js/Project/Fifth_slide.js"></script>
+		<script src="js/Project/Chart_Component.js"></script>
+	</head>
+	
+	<body>
+		<!--[if lt IE 9]>
+		<div class="alert alert-danger topframe" role="alert">
+			你的浏览器实在<strong>太旧了</strong>，
+			放学别走，升级完浏览器再说 
+			<a target="_blank" class="alert-link" href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">立即升级</a>
+		</div>
+		<![endif]-->
+		<div id="fullpage">
+			<div class="Top-nav">
+		    	<span class="home">Soul</span>
+		    	<!--响应式切换中英文按钮-->
+		    	<a href="#" class="Eng_CN_toggle_responsive">English</a>
+		    	<!--地图职位搜索栏-->
+		    	<div id="FourthJob_Control">
+		    		<div class="FourthJob">
+			    		<div class="FourthJob-search">
+			    			<div class="ui-widget">
+				    			<input type="text" class="FourthJob-put" title="搜索你想要查看的职位" placeholder="算法" onfocus="this.placeholder='' " />
+				    			<label for="FourthJob-put" style="position: absolute;"></label>
+			    			</div>
+				    		<span class="fa-FourthJob-icon" id="Fourthsearch">
+				    			<i class="fa fa-neuter FourthJob-icon"></i>
+				    		</span>
+			    		</div>
+			    	</div>
+		    	</div>
+		    	<!--中英文切换栏-->
+		    	<span class="Eng_CN-border">
+			    	<span href="#" class="Eng_CN">中文
+			    		<i class="glyphicon glyphicon-menu-left Eng_CN-icon" style="font-size: 12px;margin-left: 2px;"></i>
+			    	</span>
+			    	<a href="#" class="Eng_CN_to">English</a>
+			    </span>
+		    </div>
+		    <div class="section">
+			    <div class="Left_item hidden-sm hidden-xs">
+			    	<div class="Options">
+			    		<div class="Options-Header" data-toggle="collapse" data-target="#option">
+			    			<span class="icon_back" style="height: 56px;"></span>
+			    			<i class="glyphicon glyphicon-list" style="top: 2px;"></i>
+			    			<span class="Options-Header-title">选项</span>
+			    			<i class="glyphicon glyphicon-menu-left Options-Header-icon"></i>
+			    		</div>
+			    		<ul class="collapse" id="option">
+			    			<li>
+			    				<i class="glyphicon glyphicon-refresh"></i>
+			    				刷新
+			    			</li>
+			    			<li>
+			    				<i class="glyphicon glyphicon-fullscreen"></i>
+			    				全屏
+			    			</li>
+			    			<li>
+			    				<i class="glyphicon glyphicon-off"></i>
+			    				退出/关闭
+			    			</li>
+			    		</ul>
+			    		<div class="Options-footer">Chart Lists</div>
+			    		<ul class="mynav">
+				    		<li class="actives">
+				    			<span class="icon_back"></span>
+				    			<i class="fa fa-bar-chart icons"></i>
+				    			<a href="#1">技能分析</a>
+				    		</li>
+				    		<li>
+				    			<span class="icon_back"></span>
+				    			<i class="fa fa-pie-chart icons"></i>
+				    			<a href="#2">学历分析</a>
+				    		</li>
+				    		<li>
+				    			<span class="icon_back"></span>
+				    			<i class="fa fa-line-chart icons"></i>
+				    			<a href="#3">薪资分析</a>
+				    		</li>
+				    		<li>
+				    			<span class="icon_back"></span>
+				    			<i class="fa fa-connectdevelop icons"></i>
+				    			<a href="#4">地区分析</a>
+				    		</li>
+				    		<li>
+				    			<span class="icon_back"></span>
+				    			<i class="fa fa-area-chart fa-lg icons"></i>
+				    			<a href="#5">公司性质</a>
+				    		</li>
+				    		<li>
+				    			<span class="icon_back"></span>
+				    			<i class="glyphicon glyphicon-option-horizontal icons-to"></i>
+				    			<a href="#" style="transform: translateX(-20px);">更多</a>
+				    		</li>
+				    	</ul>
+			    	</div>
+			    </div>
+			    <ul class="list-group mylist">
+			    	<span class="glyphicon glyphicon-menu-left btn-lg myLeft"></span>
+			   		<span class="glyphicon glyphicon-menu-right btn-lg myright"></span>
+			    </ul>
+		       	
+		       	<!--响应式底部通栏-->
+		       	<div class="Bottom_item_responsive hidden-md hidden-lg">
+		       		<ul class="Bottom_item_list">
+			    		<li>
+			    			<a href="#1">技能分析</a>
+			    			<span class="Bottom_item_back"></span>
+			    		</li>
+			    		<li>
+			    			<a href="#2">学历分析</a>
+			    			<span></span>
+			    		</li>
+			    		<li>
+			    			<a href="#3">薪资分析</a>
+			    			<span></span>
+			    		</li>
+			    		<li>
+			    			<a href="#4">地区分析</a>
+			    			<span></span>
+			    		</li>
+			    		<li>
+			    			<a href="#5">公司性质</a>
+			    			<span></span>
+			    		</li>
+			    	</ul>
+		       	</div>
+		        
+		        <div class="slide" id="1"> 	
+		        	<div class="container-fluid">
+			    		<div class="row">
+			    			<div class="col-lg-3 col-md-2 col-sm-0 col-xs-0"></div>
+				    		<div class="col-lg-9 col-md-10 col-sm-12 col-xs-12" id="First_chart" style="margin-top: 50px;position: relative;">
+				    			<div id="main"></div>
+					    		<div class="alert alert-success Toolbar_Tip hidden-sm hidden-xs">
+					    			<span class="Toolbar_Tip_text">在这里可以对图表进行一些操作,如下载图表...</span>
+								    <span>
+								        <a href="#" class="close Tip_close" data-dismiss = "alert">&times;</a>
+								    </span>
+								</div>
+									
+								<div class="modal fade Job_modal hidden-sm hidden-xs" id="Job_modal">
+					    			<div class="modal-dialog">
+					    				<div class="modal-content" style="border-top: none;">
+					    					<!--标题区域-->
+					    					<div class="modal-header Job_header">
+					    						<h5 class="modal-title">选择你心仪的职位</h5>
+						   					</div>
+						   					<div class="Job_close">
+						   						<button data-dismiss="modal" tabindex="-1">
+													<span>&times;</span>
+												</button>
+						   					</div>
+						   					<!--内容区域-->
+											<div class="modal-body Job_body">
+												<div class="row Job_body_row">
+													<div class="col-md-4 modal_part">
+														<span class="Job_part" data-toggle="collapse" data-target="#content">算法相关分类</span>
+														<div class="collapse in Job_list_fa" id="content">
+															<ul class="Job_list">
+																<li>
+																	<a class="data" href="#">算法</a>
+																</li>
+																<li>
+																	<a class="data" href="#">图像算法</a>
+																</li>
+																<li>
+																	<a class="data" href="#">算法工程师</a>
+																</li>
+																<li>
+																	<a class="data" href="#">算法研究员</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-md-4 modal_part">
+														<span class="Job_part" data-toggle="collapse" data-target="#contentTwo">大数据分类</span>
+														<div class=" collapse in Job_list_fa" id="contentTwo">
+															<ul class="Job_list">
+																<li>
+																	<a class="data" href="#">数据分析</a>
+																</li>
+																<li>
+																	<a class="data" href="#">数据挖掘</a>
+																</li>
+																<li>
+																	<a class="data" href="#">数据分析师</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-md-4 modal_part">
+														<span class="Job_part" data-toggle="collapse" data-target="#contentThir">人工智能分类</span>
+														<div class="collapse in Job_list_fa" id="contentThir">
+															<ul class="Job_list">
+																<li>
+																	<a class="data" href="#">人工智能</a>
+																</li>
+																<li>
+																	<a class="data" href="#">图像识别</a>
+																 </li>
+																 <li>
+																	<a class="data" href="#">图像处理</a>
+																 </li>
+																<li>
+																	<a class="data" href="#">语音识别</a>
+																</li>
+																<li>
+																	<a class="data" href="#">机器学习</a>
+																</li>
+																<li>
+																	<a class="data" href="#">机器视觉</a>
+																 </li>
+																<li>
+																	<a class="data" href="#">深度学习</a>
+																</li>
+																<li>
+																	<a class="data" href="#">自然语言处理</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+						   			</div>
+						   		</div>
+						   		
+						   		<!--响应式职位选择面板-->
+						   		<hr class="hidden-lg hidden-md"/>
+						   		<div class="JobToggle_panel_esponsive hidden-lg hidden-md">
+			    					<div class="JobToggle_panel_header">
+			    						<span class="JobToggle_panel_title">选择你心仪的职位展示</span>
+			    						<i class="caret JobToggle_panel_interval" style=""></i>
+			    						<div class="container">
+			    							<div class="JobToggle_panel_body">
+			    								<div class="row">
+			    									<div class="col-sm-4 col-xs-4">
+			    										<span class="JobToggle_panel_body_Part">算法相关</span>
+			    										<ul class="JobToggle_panel_body_content">
+															<li>
+																<a class="data" href="#">算法</a>
+															</li>
+															<li>
+																<a class="data" href="#">图像算法</a>
+															</li>
+															<li>
+																<a class="data" href="#">算法工程师</a>
+															</li>
+															<li>
+																<a class="data" href="#">算法研究员</a>
+															</li>
+														</ul>
+			    									</div>
+			    									
+			    									<div class="col-sm-4 col-xs-4">
+			    										<span class="JobToggle_panel_body_Part">大数据</span>
+			    										<ul class="JobToggle_panel_body_content">
+															<li>
+																<a class="data" href="#">数据分析</a>
+															</li>
+															<li>
+																<a class="data" href="#">数据挖掘</a>
+															</li>
+															<li>
+																<a class="data" href="#">数据分析师</a>
+															</li>
+															<li>
+																<a class="data" href="#">深度学习</a>
+															</li>
+															<li>
+																<a class="data" href="#">自然语言处理</a>
+															</li>
+														</ul>
+			    									</div>
+			    									
+			    									<div class="col-sm-4 col-xs-4">
+			    										<span class="JobToggle_panel_body_Part">人工智能</span>
+			    										<ul class="JobToggle_panel_body_content">
+															<li>
+																<a class="data" href="#">人工智能</a>
+															</li>
+															<li>
+																<a class="data" href="#">图像识别</a>
+															 </li>
+															 <li>
+																<a class="data" href="#">图像处理</a>
+															 </li>
+															<li>
+																<a class="data" href="#">语音识别</a>
+															</li>
+															<li>
+																<a class="data" href="#">机器学习</a>
+															</li>
+															<li>
+																<a class="data" href="#">机器视觉</a>
+															</li>
+														</ul>
+			    									</div>
+			    									
+			    								</div>
+			    							</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    				
+					    		<div class="Tool">
+						    		<div class="Job_toggle hidden-sm hidden-xs">
+						   				<span id="Job_control" class="btn btn-default Job_control" data-toggle="modal" data-target="#Job_modal">
+						   					<i class="glyphicon glyphicon-list"></i>
+						   					选择职位
+						   				</span>
+						    		</div>
+					    			<ul class="nav navbar nav-pills Tool_ul">
+					   					<li>
+					   						<a href="#" class="average">
+					   							<i class="glyphicon glyphicon-remove-circle close_Point"></i>隐藏平均值
+					   						</a>
+				    					</li>
+				    					<li>
+				    						<a href="#" class="max_min">
+				    							<i class="glyphicon glyphicon-remove-circle close_Point"></i>隐藏最大/最小值
+					    					</a>
+					    				</li>
+					    				<li>
+					   						<a href="#" class="DataZoom">
+					   							<i class="glyphicon glyphicon-ok-circle close_Point"></i>开启职位过滤
+					   						</a>
+					   					</li>
+				    					<li>
+				    						<a href="#" class="DataZoom_vertical">
+				    							<i class="glyphicon glyphicon-ok-circle close_Point"></i>开启次数过滤
+				    						</a>
+				    					</li>
+				    				</ul>
+				    			</div>
+				    		</div>
+		    			</div>
+		    		</div>
+		    		
+		    	</div>
+		        
+			    <div class="slide" id="2">
+			        <div class="container-fluid">
+			        	<div class="row">
+			        		<div class="col-lg-2  col-md-3 col-sm-0 col-xs-0"></div>
+			        		<div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
+			        			<div class="mainTwo-TopJob" title="当前职位"></div>
+			        			<div id="mainTwo-school"></div>
+			        			<div id="mainTwo-salary"></div>
+			        			<div class="Tool-Two">
+			        				<ul class="Tool-Two-content">
+			        					<li>
+			        						<i class="fa fa-pie-chart"></i>
+			        						切换视图
+			        					</li>
+			        					<li>
+			        						<span class="Tool-Two-content_radio">
+			        							<i class="fa fa-circle Tool-Two-content_radios"></i>
+			        						</span>
+			        						多选</li>
+			        					<li data-toggle="tooltip" title="将图表导出到本地">
+			        						<i class="fa fa-file-image-o"></i>
+			        						导出图表
+			        					</li>
+			        				</ul>
+			        			</div>
+			        			
+			        			<!--职位选择区域-->
+			        			<div class="mainTwo-JobToggle">
+			        				<div class="mainTwo-JobToggle-body">
+			        					<div class="mainTwo-JobToggle-first">
+			        						<span class="mainTwo-JobToggle-head">算法相关分类</span>
+				        					<ul class="mainTwo-JobToggle-content">
+												<li>
+													<a class="data-two activeTwo-data" href="#">算法</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">算法工程师</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">图像算法</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">算法研究员</a>
+												</li>
+											</ul>
+			        					</div>
+			        					<div class="mainTwo-JobToggle-second">
+											<span class="mainTwo-JobToggle-head">大数据分类</span>
+			    							<ul class="mainTwo-JobToggle-content">
+												<li>
+													<a class="data-two" href="#">数据挖掘</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">数据分析</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">图像处理</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">数据分析师</a>
+												</li>
+												<li>
+													<a class="data-two" href="#">深度学习</a>
+												</li>
+											</ul>
+										</div>
+										<div class="mainTwo-JobToggle-third">
+											<span class="mainTwo-JobToggle-head">人工智能分类</span>
+			    							<ul class="mainTwo-JobToggle-content">
+													<li>
+														<a class="data-two" href="#">人工智能</a>
+													</li>
+													<li>
+														<a class="data-two" href="#">图像识别</a>
+													</li>
+													<li>
+														<a class="data-two" href="#">语音识别</a>
+													</li>
+													<li>
+														<a class="data-two" href="#">机器学习</a>
+													</li>
+													<li>
+														<a class="data-two" href="#">机器视觉</a>
+													</li>
+													<li>
+														<a class="data-two" href="#">自然语言处理</a>
+													</li>
+											</ul>
+										</div>
+			        				</div>
+			        			</div>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>
+			    
+			    <div class="slide" id="3">
+			    	<div class="container-fluid">
+			    		<div class="row">
+			    			<div class="col-md-2 col-md-3 col-sm-0 col-xs-0"></div>
+			    			<div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
+			    				<div id="mainThird-Salary"></div>
+			    				<div id="mainThird-rank_Salary"></div>
+			    				<div class="JobThird">
+			    					<div class="JobThird-show">
+			    						<span class="JobThird-show-text">当前职位</span>
+			    					</div>
+			    					<div class="JobThird-linear">
+			    						<i class="glyphicon glyphicon-menu-right JobThird-linear-icon"></i>
+			    						<i class="glyphicon glyphicon-menu-right JobThird-linear-icon"></i>
+			    						<i class="glyphicon glyphicon-menu-right JobThird-linear-icon"></i>
+			    					</div>
+			    					<span class="JobThird-Job"></span>
+			    				</div>
+			    				<div class="JobThird-average">
+			    					<span class="JobThird-average-toggle active-average">
+			    						最高薪资
+			    						<span class="JobThird-average-iconback active-average-iconback"></span>
+			    					</span>
+			    					<span class="JobThird-average-toggle">
+			    						平均薪资
+			    						<span class="JobThird-average-iconback"></span>
+			    					</span>
+			    					<span class="JobThird-average-toggle">
+			    						最低薪资
+			    						<span class="JobThird-average-iconback"></span>
+			    					</span>
+			    				</div>
+			    				<div class="JobThird-toggle">
+			    					<div class="row row-small">
+			    						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 " style="padding: 0!important;">
+			    							<div class="JobThird-toggle-Classify">
+			    								<span class="JobThird-toggle-Classify-head">算法相关分类</span>
+			    								<i class="fa fa-angle-up"></i>
+			    								<ul class="JobThird-toggle-Classify-content">
+													<li>
+														<a class="data-third activeThird-data" href="#">算法</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">算法工程师</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">图像算法</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">算法研究员</a>
+													</li>
+												</ul>
+			    							</div>
+			    						</div>
+			    						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 " style="padding: 0!important;">
+			    							<div class="JobThird-toggle-Classify">
+			    								<span class="JobThird-toggle-Classify-head">大数据分类</span>
+			    								<i class="fa fa-angle-up"></i>
+			    								<ul class="JobThird-toggle-Classify-content">
+													<li>
+														<a class="data-third" href="#">数据挖掘</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">数据分析</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">图像处理</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">数据分析师</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">深度学习</a>
+													</li>
+												</ul>
+			    							</div>
+			    						</div>
+			    						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 " style="padding: 0!important;">
+			    							<div class="JobThird-toggle-Classify">
+			    								<span class="JobThird-toggle-Classify-head">人工智能分类</span>
+			    								<i class="fa fa-angle-up"></i>
+			    								<ul class="JobThird-toggle-Classify-content">
+													<li>
+														<a class="data-third" href="#">人工智能</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">图像识别</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">语音识别</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">机器学习</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">机器视觉</a>
+													</li>
+													<li>
+														<a class="data-third" href="#">自然语言处理</a>
+													</li>
+												</ul>
+			    							</div>
+			    						</div>
+			    						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 " style="padding: 0!important;">
+			    							<div class="JobThird-toggle-Classify" style="border: none;">
+			    								<span class="JobThird-toggle-Classify-head">
+			    									<i class="fa fa-ellipsis-h"></i>
+			    									更多
+			    								</span>
+			    							</div>
+			    						</div>
+			    					</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+			    </div>
+			   
+			    <div class="slide" id="4">
+			    	<div class="container-fluid container-small">
+			    		<div class="row container-small-row">
+			    			<div class="col-lg-1 col-md-2 col-sm-0 col-xs-0"></div>
+			    			<div class="col-lg-11 col-md-10 col-sm-12 col-xs-12 container-small-row-col">
+			    				<div id="mainFourth"></div>
+			    			</div>
+			    		</div>
+			    	</div>
+			    </div>
+			    
+			    <div class="slide" id="5">
+			    	<div class="container-fluid">
+			    		<div class="row">
+			    			<div class="col-md-3 col-md-3 col-sm-0 col-xs-0"></div>
+			    			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+			    				<div id="mainfifth"></div>
+			    			</div>
+			    		</div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*修改全屏之后的背景样式*/
+:not(:root):-webkit-full-screen::backdrop {
+    background: rgb(255,255,255)!important;
+}
+:not(:root):-moz-full-screen::backdrop {
+    background: rgb(255,255,255)!important;
+}
+
+/*当进入全屏之后针对某个元素进行样式设定*/
+/*Chrome*/
+:-webkit-full-screen .Options-Header {
+	font-size: 14px;
+}
+:-webkit-full-screen .Left_item {
+	width: 250px!important;
+}
+:-webkit-full-screen .prev {
+	left: 250px;
+}
+:-webkit-full-screen .myLeft {
+	left: 90px;
+}    
+:-webkit-full-screen .icon {
+	background-position: 65px 329px;
+}    
+:-webkit-full-screen .Tool {
+	transform: translate(-95px,80px);
+}    
+:-webkit-full-screen #main {
+	width: 990px;
+    height: 565px;
+}
+:-webkit-full-screen .mainTwo-JobToggle {
+	transform: translate(20px,0px);
+}
+:-webkit-full-screen #mainTwo-school {
+	transform: translate(115px,40px);
+}
+:-webkit-full-screen .Tool-Two {
+	margin-left: 130px;
+}
+:-webkit-full-screen .Tool-Two-content > li {
+	font-size: 14px;
+}
+/*Firefox*/
+:-moz-full-screen .Options-Header {
+	font-size: 14px;
+}
+:-moz-full-screen .Left_item {
+	width: 250px!important;
+}
+:-moz-full-screen .prev {
+	left: 250px;
+}
+:-moz-full-screen .myLeft {
+	left: 90px;
+}    
+:-moz-full-screen .icon {
+	background-position: 65px 329px;
+}    
+:-moz-full-screen #main {
+	width: 990px;
+    height: 565px;
+}
+:-webkit-full-screen #mainTwo-school {
+	transform: translate(115px,40px);
+}
+:-webkit-full-screen .Tool-Two {
+	margin-left: 130px;
+}
+:-webkit-full-screen .Tool-Two-content > li {
+	font-size: 14px;
+}

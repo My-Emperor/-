@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:hdp="http://www.springframework.org/schema/hadoop"
+       xmlns:hap="http://www.springframework.org/schema/hadoop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/hadoop http://www.springframework.org/schema/hadoop/spring-hadoop.xsd">
+
+    <context:component-scan base-package="cn.soul.dao"></context:component-scan>
+
+    <context:property-placeholder location="classpath:hbase.properties"/>
+
+
+    <!--配置zookeeper地址和端口-->
+    <hdp:configuration id="hadoopConfiguration">
+        fs.defaultFS="hdfs://192.168.159.101:9000"
+    </hdp:configuration>
+
+    <hap:hbase-configuration id="hbaseConfiguration"  zk-port="${hbase.zk.port}" zk-quorum="${hbase.zk.host}"/>
+
+
+    <!--配置HbaseTemplate-->
+    <bean id="hbaseTemplate" scope="prototype" class="org.springframework.data.hadoop.hbase.HbaseTemplate">
+        <property name="configuration" ref="hbaseConfiguration"/>
+    </bean>
+</beans>

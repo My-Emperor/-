@@ -1,0 +1,138 @@
+    环境搭建文档
+    编译软件: IDEA(version 2019.1)
+    服务器:Tomcat 8.0.53
+    JDk: java version "1.8.0_131"
+
+    项目文档
+    1.
+    `软件: IDEA
+    `技能点: Maven Spring SpringMVC Log4j hbaseTemplate HttpServletRequest HttpServletResponse URLDecoder XML
+    `编程语言: java
+    2.
+    `可视化部分后端介绍和实现步骤:
+      1.介绍:
+        使用Spring,springmvc对项目进行统一管理,
+        设置统一编码,跨域请求的过滤器,
+        View层:对数据进行可视化处理,初始化和事件会发送请求指到Controller对应的action,等待返回响应体
+        Controller层:调用Service层接口,与前端进行交互,接收,处理,返回数据
+        Service层:调用Dao层接口,为Controller层提供接口,处理前端业务数据
+        Dao层:调用数据库对应接口查询数据,数据库连接参数在Spring配置文件中进行配置1,通过自定义工具类处理数据格式,为Service层提供接口,
+        通过HbaseTemplace读取hbase中的数据,用集合去储存,处理,最后转换成JSON响应到前端
+      2.实现步骤:
+        1)前端请求到Controller中对应的action,
+        2)通过service对应方法中HbaseDaoImpl的方法获取数据,
+        3)在HbaseDaoImpl中,先通过HbaseDaoUtils中的hbaseTemplace读取对应表中的所有数据返回表的List<Map>集合,
+        4)再通过自定义工具类HbaseUtils中对Collections的sort方法Comparator的重写对List进行排序,
+        5)再将排好序的List集合通过HbaseUtils中对对应逻辑处理列族的方法进行处理,返回对应的集合
+        6)service拿到数据集合后根据前端所需JSON格式将数据处理成数据源集合,返回对应的集合
+        7)Controller拿到数据集合通过fastjson转换成JSON响应给前端
+
+
+        后端技术亮点:
+            hbaseTemplate连接池:HTableInterface
+            ConnectionFactory为hbase更新的连接池,但对于hbaseTemplate中已对HtableInterface这个过时的连接池进行处理与优化,
+            对于仅用于展示,低并发的项目而言,HtableInterface能够满足需求,所以不对底层连接池进行替换,
+
+            在spring中对前端静态资源进行处理
+            手机端跨域请求处理
+            自定义hbase数据处理工具类
+
+    代码说明:
+    1. src
+        1.1 java
+            1.1.1 controller 业务处理包(日常代码维护主要包)
+                        DataController:
+            1.1.2 dao 查询数据
+                        HbaseDao 处理数据类接口:
+                        HbaseDaoimpl 处理数据实现类:
+                        HbaseDaoUtils 查询数据工具类
+                        HbaseUtils 处理数据功能工具类:
+            1.1.3 filter 处理乱码和跨域的过滤器
+                    CorsFilter 全局乱码处理
+                    EncodingFilter 请求跨域处理
+            1.1.4 service 处理代码与前端对应
+                    DataService: 接口
+                    DataServiceImpl: 实现类
+        1.2.resources
+            1.2.1 spring spring的配置文件
+                    applicationContext-dao.xml
+                        扫描dao层,配置zookeeper地址和端口,配置HbaseTemplate
+                    applicationContext-service.xml
+                        扫描service层
+                    springmvc.xml
+                        扫描controller层,静态资源处理
+            1.2.2 log4j 日志处理配置
+            1.2.3 hbase.properties hbase的配置文件
+        1.3.webapp
+            1.3.1 css
+            1.3.2 fonts
+            1.3.3 js
+            1.3.4 WEB-INF
+                    web.xml
+                        加载spring容器
+                        配置Springmvc前端控制器
+                        全局编码filter
+                        跨域filter
+            3.5 index.html
+    2.pom.xml 配置文件
+
+ 项目实现流程介绍
+    可视化阶段流程
+        Controller:
+            DataController
+                (开启tomcat,页面加载,发送初始化请求访问action)
+                (过滤器:
+                    1.全局编码格式:
+                    2.处理跨域请求:response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+                    )
+                1.将来自前端的参数(id)进行解码
+                2.调用DataServiceImpl中的方法,并传入参数id
+                3.接收方法返回的数据
+                4.通过fastjson中 JSON.toJSON(data) 将data转换为对应的JSON格式
+                5.最后将JSON数据response响应给前端
+        Service:
+            DataServiceImpl
+                1.调用HbaseDaoImpl对应的方法,并传入参数jobName(id)
+                2.接收方法返回的数据
+                (
+                    根据前端对业务数据的要求不同
+                    对数据进行处理
+                 }
+                3.return 返回data
+        Dao:
+            HbaseDaoImpl
+                1.调用自定义查询工具类HbaseDaoUtils 通过HbaseTemplate对目标业务的表进行读取,返回一个List<Map>的数据集合
+                (HbaseDaoUtils:
+                    hbaseDaoUtils.findData()
+                    底层:hbaseTemplate.find(tableName, scan, new RowMapper<Map<String, Object>>() {)
+                )
+                2.再通过自定义处理格式工具类HbaseUtils对List<Map>集合中的数据格式再次处理,
+                (HbaseUtils:
+                  a.按照row对集合进行排序
+                    HbaseUtils.sortArray(List<Map>,row)
+                  b.将列值对应返回为Key,Value的Map集合
+                    HbaseUtils.familyQualifierToMap(List<Map> list, String familyQualifier1, String familyQualifier2)
+                  c.返回List中对应判断列值为Key,Value的Map集合
+                    HbaseUtils.ifFamilyQualifierToMap(List<Map> list, String jobName, String ifFamilyQualifier, String familyQualifier1, String familyQualifier2)
+                  d.返回该列值的所有List集合
+                    HbaseUtils.allFamilyQualifierToList(List<Map> list, String FamilyQualifier)
+                  e.返回该列值不重复的Set集合
+                    HbaseUtils.OnlyFamilyQualifierToList(List<Map> list, String FamilyQualifier)
+                  f.返回对应判断列值的List集合
+                    HbaseUtils.ifFamilyQualifierToList(List<Map> list, String jobName, String ifFamilyQualifier, String FamilyQualifier)
+                )
+                3.return 返回data集合
+
+
+
+
+
+
+
+
+
+
+
+
+
+
